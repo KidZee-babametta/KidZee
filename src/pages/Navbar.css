@@ -1,0 +1,142 @@
+:root {
+  --violet-1: #642d81;
+  --yellow-1: #fef200;
+  --yellow-2: #fcf302;
+  --violet-2: #64318e;
+  --blackish: #280c11;
+  --yellow-3: #fced22;
+  --white: #ffffff;
+  --active-bg: #fef200;
+  --active-text: #280c11;
+}
+
+.navbar {
+  background-color: #fdfbda;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.4s ease;
+  z-index: 1000;
+  box-shadow: 0 6px 12px rgba(100, 45, 129, 0.1);
+}
+
+.navbar.hidden {
+  top: -100px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--violet-1);
+  font-weight: 700;
+  font-size: 20px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: var(--yellow-1);
+  color: var(--blackish);
+}
+
+.nav-links li a.active {
+  background-color: var(--active-bg);
+  color: var(--active-text);
+  box-shadow: 0 2px 8px rgba(252, 243, 2, 0.5);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.dot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 6px);
+  grid-gap: 5px;
+  padding: 4px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--violet-2);
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar-container {
+    padding: 10px 20px;
+    max-width: 1000px;
+  }
+
+  .logo {
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  .nav-links li a:hover {
+    background-color: var(--yellow-1);
+    color: var(--blackish);
+  }
+
+  .nav-links li a.active {
+    background-color: var(--active-bg);
+    color: var(--active-text);
+    box-shadow: 0 1px 6px rgba(252, 243, 2, 0.4);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    flex-direction: column;
+    background: var(--white);
+    border: 2px solid var(--violet-1);
+    border-radius: 10px;
+    display: none;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
