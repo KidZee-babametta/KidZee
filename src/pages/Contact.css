@@ -1,5 +1,6 @@
 .contact-page-wrapper {
     background-color: #ebd4ff;
+    font-family: 'Outfit', sans-serif;
 
 }
 
@@ -669,8 +670,8 @@
 
 .contact-section {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center; 
+  align-items: center;
   padding: 80px 50px;
   position: relative;
  

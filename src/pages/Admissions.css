@@ -1,6 +1,7 @@
 .ad{
     background-color: #ebe1ff;
      overflow-x: hidden;
+     font-family: 'Outfit', sans-serif;
 }
 .admissions-section {
   display: flex;

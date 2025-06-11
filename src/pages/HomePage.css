@@ -12,6 +12,7 @@
 
 .homepage-wrapper {
   padding-top: 60px;
+  font-family: 'Outfit', sans-serif;
   
 }
 
@@ -99,14 +100,15 @@
 }
 
 .homepage-subtitle {
-  font-size: 28px;
-  font-weight: bold;
-  background: linear-gradient(to right, var(--yellow-1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 10px;
-  text-align: center;
-  letter-spacing: 0px;
+   font-size: 40px;
+  font-weight: 750;
+  color: var(--violet-1);
+  text-shadow: 
+    -3px -3px 0 var(--yellow-1),
+    1px -1px 0 var(--yellow-1),
+    -1px 1px 0 var(--yellow-1),
+    1px 1px 0 var(--yellow-1);
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -440,6 +442,148 @@
     padding: 10px 16px;
     font-size: 15px;
     border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .homepage-trust-section {
+    padding: 20px 16px;
+    margin: 30px auto;
+  }
+
+  .homepage-trust-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .homepage-trust-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .homepage-trust-left {
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .homepage-trust-grid {
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  .trust-card {
+    min-height: 90px;
+  }
+
+  .trust-count {
+    font-size: 24px;
+  }
+
+  .trust-label {
+    font-size: 12px;
+  }
+
+  .big-card img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .homepage-trust-right {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homepage-trust-text {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .homepage-trust-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .visit-button,
+  .team-button {
+    width: 90%;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .homepage-trust-section {
+    padding: 16px 12px;
+    margin: 20px auto;
+  }
+
+  .homepage-trust-heading {
+    font-size: 18px;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .homepage-trust-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .homepage-trust-left {
+    width: 100%;
+  }
+
+  .homepage-trust-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .trust-card {
+    min-height: 80px;
+  }
+
+  .trust-count {
+    font-size: 20px;
+  }
+
+  .trust-label {
+    font-size: 10px;
+  }
+
+  .big-card img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .homepage-trust-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homepage-trust-text {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .homepage-trust-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .visit-button,
+  .team-button {
+    width: 85%;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 5px;
   }
 }
 

@@ -1,25 +1,31 @@
 .homepage-footer {
   background-color: #a235e1;
-  padding: 60px 40px;
   color: white;
   position: relative;
   overflow: hidden;
+  font-family: 'Outfit', sans-serif;
 }
 
 .footer-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 40px;
 }
 
-.footer-left,
-.footer-list,
-.footer-links,
-.footer-contact {
-  flex: 1;
+@media (min-width: 768px) {
+  .footer-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 80px;
+  }
+}
+
+.footer-left {
+  max-width: 600px;
 }
 
 .footer-heading {
+  align-items: flex-start;
   font-size: 72px;
   font-weight: 900;
   color: var(--violet-1);
@@ -87,18 +93,6 @@
   animation: bubble-animation 12s infinite ease-in-out;
   object-fit: cover;
 }
-.bubble-yellow {
-  background-color: #fff200; 
-}
-
-.bubble-violet {
-  background-color: #4a016e;
-}
-
-.bubble-purple {
-  background-color: #ebe1ff; 
-}
-
 
 .footer-bubble-one {
   margin-left: 400px;
@@ -109,8 +103,6 @@
 .footer-bubble-two {
   margin-top: 80px;
 }
-
-
 
 @keyframes bubble-animation {
   0% {
@@ -130,70 +122,10 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .footer-section {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .footer-left,
-  .footer-list,
-  .footer-links,
-  .footer-contact {
-    flex: 1;
-    margin-bottom: 0;
-    text-align: left;
-  }
-
-  .footer-heading {
-    font-size: 40px;
-  }
-
-  .footer-subheading {
-    font-size: 22px;
-  }
-
-  .footer-address {
-    font-size: 14px;
-  }
-
-  .footer-list li,
-  .footer-links li {
-    font-size: 16px;
-  }
-
-  .footer-contact h4 {
-    font-size: 18px;
-  }
-
-  .footer-contact p {
-    font-size: 14px;
-  }
-
-  .footer-bubbles {
-    top: 10%;
-    left: 10%;
-    z-index: 999;
-  }
-
-  .footer-bubble-one {
-    margin-left: 300px;
-    margin-top: 150px;
-    z-index: 1;
-  }
-
-  .footer-bubble-two {
-    margin-top: 60px;
-  }
-
-
-}
-
+/* Mobile View Styles */
 @media screen and (max-width: 767px) {
   .footer-section {
-    flex-direction: row; 
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
   }
 
@@ -202,16 +134,16 @@
   .footer-links,
   .footer-contact {
     text-align: left;
-    flex: 0 0 48%; 
+    flex: 0 0 100%;
     margin-bottom: 20px;
   }
 
   .footer-heading {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .footer-subheading {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .footer-address {
@@ -224,7 +156,7 @@
   }
 
   .footer-contact h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .footer-contact p {
@@ -232,12 +164,45 @@
   }
 
   .footer-bubble-one {
-    margin-left: 90%;
-    margin-top: 40%;
+    margin-left: 80%;
+    margin-top: 30%;
     z-index: 2;
   }
 
-  
+  .footer-list-item {
+    cursor: pointer;
+  }
 
+  .footer-list-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
 
+  .footer-list-header .toggle-btn {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .sub-list {
+    display: none;
+    padding-left: 20px;
+  }
+
+  .footer-list-item.open .sub-list {
+    display: block;
+  }
+
+  .footer-contact .contact-details {
+    display: none;
+  }
+
+  .footer-contact.open .contact-details {
+    display: block;
+  }
+
+  .mobile-only {
+    display: inline-block;
+  }
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import './HomePage.css';
 import Footer from './Footer';
@@ -17,10 +18,14 @@ const subSlides = [
 ];
 
 function HomePage() {
+    const navigate = useNavigate();
     const [mainIndex, setMainIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
     const [expertiseCount, setExpertiseCount] = useState(0);
     const [centresCount, setCentresCount] = useState(0);
+    const handleButtonClick = () => {
+    navigate('/admissions');
+  };
 
     const [index, setIndex] = useState(0);
         const [items] = useState([
@@ -57,6 +62,7 @@ function HomePage() {
             clearInterval(intervalSub);
         };
     }, []);
+    
 
     useEffect(() => {
         let count1 = 0;
@@ -86,7 +92,7 @@ function HomePage() {
             <section className="homepage-main-section">
                 <div className="homepage-heading-container">
                     <h1 className="homepage-title">KIDZEE</h1>
-                    <h2 className="homepage-subtitle">PRE- SCHOOL</h2>
+                    <h2 className="homepage-subtitle">PRE- SCHOOL <br />BABAMETTA</h2>
                 </div>
                 <div className="homepage-slideshow-wrapper">
                     <div className="homepage-left-slideshow">
@@ -134,7 +140,9 @@ function HomePage() {
                     <p className="homepage-mickey-text">
                         Let your child step into a magical journey where learning feels like play, and every day is filled with smiles. At Kidzee, we create joyful beginnings for bright futures – shaped by curiosity, care, and creativity.
                     </p>
-                    <button className="homepage-mickey-button">Explore the Kidzee Way</button>
+                    <button className="homepage-mickey-button" onClick={handleButtonClick}>
+      Explore the Kidzee Way
+    </button>
                 </div>
             </section>
 

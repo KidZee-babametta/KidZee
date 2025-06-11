@@ -1,6 +1,7 @@
 .gallery-page{
     background-color: #ebe1ff;
     height: 100%;
+    font-family: 'Outfit', sans-serif;
 }
 .fun-play-section {
   display: flex;
@@ -115,7 +116,7 @@
   background: linear-gradient(to right, #65318e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 400;
+  font-weight: 800;
   margin-bottom: 30px;
   text-align: left;
 }
@@ -139,7 +140,7 @@
   font-size: 1.2rem;
   padding-left: 25px;
   color: #65318e;
-  font-weight: 400;
+  font-weight: 600;
   transition: transform 0.3s, color 0.3s;
 }
 
