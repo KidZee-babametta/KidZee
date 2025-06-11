@@ -7,11 +7,13 @@ import Facilities from './pages/Facilities';
 import Admissions from './pages/Admissions';
 import Contact from './pages/Contact';
 import Footer from './pages/Footer';
+import PopupCard from './pages/PopupCard';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <PopupCard />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />

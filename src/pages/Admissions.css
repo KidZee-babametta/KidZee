@@ -164,7 +164,6 @@
   }
 
   .admissions-cards {
-    border: 1px solid #52ef77;
     max-width: 500px;
     width: 60%;
     flex-direction: column;
@@ -206,7 +205,6 @@
 }
 
 
-/* iPad View (768px and below) */
 @media screen and (max-width: 768px) {
   .admissions-section {
     flex-direction: column;
@@ -227,7 +225,7 @@
   .admissions-left {
     width: 90%;
     margin-bottom: 20px;
-    text-align: center;  /* Centers the text horizontally */
+    text-align: center; 
   }
 
   .admissions-heading {
@@ -250,16 +248,16 @@
     width: 100%;
     flex-direction: column;
     gap: 15px;
-    align-items: center; /* Centers the cards horizontally */
-    display: flex; /* Enable flexbox to align the cards */
-    justify-content: center; /* Center cards vertically */
+    align-items: center;
+    display: flex; 
+    justify-content: center; 
   }
 
   .admissions-card {
     width: 140px;
     padding: 8px;
     font-size: 13px;
-    text-align: center;  /* Centers text inside the card */
+    text-align: center;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,6 +267,94 @@
     font-size: 22px;
     width: 30px;
     height: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .admissions-section {
+    flex-direction: column;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .admissions-content {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+    margin-bottom: 100px;
+  }
+
+  .admissions-left {
+    width: 90%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .admissions-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .admissions-subheading {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .admissions-enquire-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  .admissions-cards {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .admissions-card {
+    width: 120px;
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-number {
+    font-size: 22px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .card-1 {
+    margin-top: 30px;
+    margin-left: 0%;
+  }
+
+  .card-2 {
+    margin-left: 22%;
+  }
+
+  .card-3 {
+    margin-left: 46%;
+  }
+
+  .card-4 {
+    margin-left: 68%;
+    margin-bottom: 100px;
+  }
+  .pad{
+    margin-bottom: 370px;
   }
 }
 
@@ -299,41 +385,61 @@
 }
 
 .admission-student-info-section {
+  position: relative;
   margin-top: 70px;
   margin-bottom: 70px;
-  background-color: var(--violet-2); 
   padding: 25px;
   border-radius: 20px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   color: var(--yellow-1);
-  border: 2px dashed var(--yellow-1); 
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
+  background: #07182E;
+}
+
+.admission-student-info-section::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+  z-index: 0;
+}
+
+.admission-student-info-section::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  inset: 5px;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .admission-student-info-title {
+  position: relative;
   font-size: 28px;
   font-weight: 600;
   letter-spacing: -1px;
-  position: relative;
   display: flex;
   align-items: center;
   padding-left: 30px;
   color: var(--yellow-1);
-}
-
-.admission-student-info-title::before {
-  width: 18px;
-  height: 18px;
-}
-
-.admission-student-info-title::after {
-  width: 18px;
-  height: 18px;
-  animation: pulse 1s linear infinite;
+  z-index: 2;
 }
 
 .admission-student-info-title::before,
@@ -347,8 +453,8 @@
   background-color: var(--yellow-1);
 }
 
-.student-name {
-  color: var(--yellow-1);
+.admission-student-info-title::after {
+  animation: pulse 1s linear infinite;
 }
 
 .admission-student-info-form {
@@ -356,7 +462,43 @@
   flex-direction: column;
   gap: 15px;
   justify-content: center;
+  z-index: 2;
+  position: relative;
 }
+
+
+.admission-student-info-section::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+  z-index: 0;
+}
+
+.admission-student-info-field select.admission-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 98%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid var(--yellow-1);
+  border-radius: 10px;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.admission-student-info-field select.admission-input option {
+  background-color: #280c11;
+  color: #fff;
+}
+
 
 .admission-student-info-field {
   display: flex;
@@ -365,107 +507,49 @@
 }
 
 .admission-student-info-field label {
-  position: relative;
   font-size: 1.1rem;
   color: var(--yellow-1);
+  margin-bottom: 5px;
 }
 
 .admission-student-info-field .admission-input {
-  background-color: #ebe1ff; 
-  color: #280c11; 
-  width: 100%;
-  padding: 15px 3px;
-  outline: 0;
-  border: 1px solid var(--yellow-1); 
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid var(--yellow-1);
   border-radius: 10px;
   font-size: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  padding-right: 20px;
 }
 
-.admission-student-info-field .admission-input + span {
-  color: var(--yellow-2); 
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
+.admission-student-info-field .admission-input::placeholder {
+  color: #ccc;
 }
 
-.admission-student-info-field .admission-input:placeholder-shown + span {
-  top: 12.5px;
-  font-size: 0.9em;
-}
-
-.admission-student-info-field .admission-input:focus + span,
-.admission-student-info-field .admission-input:valid + span {
-  color: var(--yellow-1);
-  top: 0px;
-  font-size: 0.7em;
-  font-weight: 600;
+.admission-student-info-field .admission-input:focus {
+  border-color: #00b7ff;
+  box-shadow: 0 0 10px #00b7ff80;
 }
 
 .admission-submit-btn {
   border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 10px;
-  color: var(--violet-2); 
-  font-size: 16px;
-  transform: .3s ease;
-  background-color: var(--yellow-1); 
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: var(--violet-2);
+  font-size: 18px;
+  background-color: var(--yellow-1);
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .admission-submit-btn:hover {
   background-color: var(--yellow-2);
-}
-
-.admission-images {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  position: relative;
-}
-
-.admission-images-bottom {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.admission-image-left,
-.admission-image-right,
-.admission-image-random {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  position: relative;
-}
-
-.admission-image-left {
-  left: -200px;
-  top: -500px;
-}
-.admission-image-left1 {
-  right: 200px;
-  top: 500px;
-}
-
-
-.admission-image-right {
-  right: -500px;
-  top: -500px;
-}
-
-.admission-image-random {
-  left: 80%;
-  top: 10%;
-  transform: translateX(-50%);
-  z-index: 1;
+  transform: translateY(-2px) scale(1.05);
 }
 
 @keyframes pulse {
@@ -473,7 +557,6 @@
     transform: scale(0.9);
     opacity: 1;
   }
-
   to {
     transform: scale(1.8);
     opacity: 0;
@@ -492,12 +575,5 @@
   .admission-submit-btn {
     font-size: 1.1rem;
     padding: 14px 28px;
-  }
-
-  .admission-image-left,
-  .admission-image-right,
-  .admission-image-random {
-    width: 60px;
-    height: 60px;
   }
 }

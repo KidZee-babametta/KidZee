@@ -7,7 +7,7 @@ function Admissions() {
   return (
     <div className="ad
 ">
-      <Navbar />
+      <Navbar /><div className="pad">
       <section className="admissions-section">
         <div className="admissions-image-container">
           <img src="/Images/admission_banner.png" alt="Admissions Banner" className="admissions-image" />
@@ -37,7 +37,7 @@ function Admissions() {
             </div>
           </div>
         </div>
-      </section>
+      </section></div>
 
 
 
@@ -68,61 +68,56 @@ function Admissions() {
 
 
       <div className="admission-student-info-section">
-        <h2 className="admission-student-info-title">Student Information</h2>
-        <div className="admission-student-info-form">
-          <div className="admission-student-info-field">
-            <label className="student-name">Student Name:</label>
-            <input
-              type="text"
-              id="student-name"
-              placeholder="Enter Student's Name"
-              className="admission-input"
-            />
-          </div>
-          <div className="admission-student-info-field">
-            <label className="student-gender">Gender:</label>
-            <select id="student-gender" className="admission-input">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div className="admission-student-info-field">
-            <label className="student-age">Age:</label>
-            <input
-              type="number"
-              id="student-age"
-              placeholder="Enter Age"
-              className="admission-input"
-            />
-          </div>
-          <div className="admission-student-info-field">
-            <label className="parent-email">Parent's Email:</label>
-            <input
-              type="email"
-              id="parent-email"
-              placeholder="Enter Parent's Email"
-              className="admission-input"
-            />
-          </div>
-          <div className="admission-student-info-field">
-            <label className="parent-mobile">Parent's Mobile Number:</label>
-            <input
-              type="tel"
-              id="parent-mobile"
-              placeholder="Enter Parent's Mobile Number"
-              className="admission-input"
-            />
-          </div>
-          <button className="admission-submit-btn">Submit</button>
-        </div>
-        <div className="admission-images">
-          <img src="/Images/more_fish.png" alt="fish" className="admission-image-left" />
-          <img src="/Images/mouse_img.png" alt="mouse" className="admission-image-right" />
-          <img src="/Images/pen.png" alt="pen" className="admission-image-left1" />
-          <img src="/Images/baloon.png" alt="balloon" className="admission-image-random" />
-        </div>
-      </div>
+  <h2 className="admission-student-info-title">Student Information</h2>
+  <div className="admission-student-info-form">
+    <div className="admission-student-info-field">
+      <label className="student-name">Student Name:</label>
+      <input
+        type="text"
+        id="student-name"
+        placeholder="Enter Student's Name"
+        className="admission-input"
+      />
+    </div>
+    <div className="admission-student-info-field">
+      <label className="student-gender">Gender:</label>
+      <select id="student-gender" className="admission-input">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div className="admission-student-info-field">
+      <label className="student-age">Age:</label>
+      <input
+        type="number"
+        id="student-age"
+        placeholder="Enter Age"
+        className="admission-input"
+      />
+    </div>
+    <div className="admission-student-info-field">
+      <label className="parent-email">Parent's Email:</label>
+      <input
+        type="email"
+        id="parent-email"
+        placeholder="Enter Parent's Email"
+        className="admission-input"
+      />
+    </div>
+    <div className="admission-student-info-field">
+      <label className="parent-mobile">Parent's Mobile Number:</label>
+      <input
+        type="tel"
+        id="parent-mobile"
+        placeholder="Enter Parent's Mobile Number"
+        className="admission-input"
+      />
+    </div>
+    <button className="admission-submit-btn">Submit</button>
+  </div>
+</div>
+
 
 
 

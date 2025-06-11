@@ -61,6 +61,8 @@ function Contact() {
                 </div>
             </section>
 
+
+
             <section id="features" className="infrastructure-section">
                 <h2 className="infrastructure-heading">✨ Our State-of-the-Art Infrastructure Includes:</h2>
                 <div className="infrastructure-gallery">
@@ -92,7 +94,7 @@ function Contact() {
                 </div>
             </section>
 
-            <section id="contact-info" className="contact-section">
+            {/*<section id="contact-info" className="contact-section">
                 <div className="contact-content-wrapper">
                     <div className="contact-left">
                         <h2 className="contact-heading">📍 Visit Us:</h2>
@@ -115,7 +117,7 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
             <section id="contact-form" className="contact-section">

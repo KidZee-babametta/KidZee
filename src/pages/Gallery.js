@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
+
+import { useNavigate } from 'react-router-dom';
 import './Gallery.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Gallery = () => {
+    const navigate = useNavigate();
     const [index, setIndex] = useState(0);
+    const handleKnowMoreClick = () => {
+        navigate('/contact'); 
+    };
     const [items] = useState([
         "unit1.jpg", "unit2.jpg", "unit3.jpg", "unit4.jpg",
         "unit5.jpg", "unit6.jpg", "unit7.jpg", "unit8.jpg"
@@ -83,7 +89,7 @@ const Gallery = () => {
                     <div className="contact-banner-content">
                         <h1 className="contact-heading">Kidzee Preschool</h1>
                         <h2 className="contact-subheading">Admissions Open for 2025-26</h2>
-                        <button className="contact-enquire-button">Enquire Now</button>
+                        <button className="contact-enquire-button" onClick={handleKnowMoreClick}>Enquire Now</button>
                     </div>
                 </div>
             </section>

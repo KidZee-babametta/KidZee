@@ -24,29 +24,32 @@ function HomePage() {
     const [expertiseCount, setExpertiseCount] = useState(0);
     const [centresCount, setCentresCount] = useState(0);
     const handleButtonClick = () => {
-    navigate('/admissions');
-  };
+        navigate('/admissions');
+    };
+    const handleKnowMoreClick = () => {
+        navigate('/contact');
+    };
 
     const [index, setIndex] = useState(0);
-        const [items] = useState([
-            "unit1.jpg", "unit2.jpg", "unit3.jpg", "unit4.jpg",
-            "unit5.jpg", "unit6.jpg", "unit7.jpg", "unit8.jpg"
-        ]);
-        const [revealClass, setRevealClass] = useState("");
-    
-        const features = [
-            "Playgrounds", "Slides", "Swing Sets", "Climbing Walls", "Ball Pits",
-            "Soft Play Areas", "Sandbox", "Trampolines", "Sports Zones",
-            "Interactive Games", "Toys", "Creative Play", "Outdoor Fun", "Exploration Zones"
-        ];
-        useEffect(() => {
-                const timeout = setTimeout(() => {
-                    setRevealClass("reveal");
-                }, 1000);
-                return () => clearTimeout(timeout);
-            }, []);
+    const [items] = useState([
+        "unit1.jpg", "unit2.jpg", "unit3.jpg", "unit4.jpg",
+        "unit5.jpg", "unit6.jpg", "unit7.jpg", "unit8.jpg"
+    ]);
+    const [revealClass, setRevealClass] = useState("");
 
-        
+    const features = [
+        "Playgrounds", "Slides", "Swing Sets", "Climbing Walls", "Ball Pits",
+        "Soft Play Areas", "Sandbox", "Trampolines", "Sports Zones",
+        "Interactive Games", "Toys", "Creative Play", "Outdoor Fun", "Exploration Zones"
+    ];
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setRevealClass("reveal");
+        }, 1000);
+        return () => clearTimeout(timeout);
+    }, []);
+
+
 
     useEffect(() => {
         const intervalMain = setInterval(() => {
@@ -62,7 +65,7 @@ function HomePage() {
             clearInterval(intervalSub);
         };
     }, []);
-    
+
 
     useEffect(() => {
         let count1 = 0;
@@ -91,8 +94,14 @@ function HomePage() {
             <Navbar />
             <section className="homepage-main-section">
                 <div className="homepage-heading-container">
+                    <img
+                        src="/Images/logo.jpg"
+                        alt="Kidzee Logo"
+                        className="homepage-logo"
+                    />
                     <h1 className="homepage-title">KIDZEE</h1>
                     <h2 className="homepage-subtitle">PRE- SCHOOL <br />BABAMETTA</h2>
+                    {/* <img src="D:/school/public/Images/logo.jpg" alt="Another Image" className="homepage-sub-image" /> */}
                 </div>
                 <div className="homepage-slideshow-wrapper">
                     <div className="homepage-left-slideshow">
@@ -111,6 +120,46 @@ function HomePage() {
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+
+            <section className="ganesh-main-section">
+                <div className="ganesh-card-container">
+                    <div className="ganesh-left-card">
+                        <img
+                            src="/Images/pop-up-card.jpg"
+                            alt="Pop Up Card"
+                            className="ganesh-left-card-image"
+                        />
+                    </div>
+                    <div className="ganesh-right-card">
+                        <div className="ganesh-logo-container">
+                            <img
+                                src="/Images/logo.jpg"
+                                alt="Kidzee Logo"
+                                className="ganesh-logo-image"
+                            />
+                        </div>
+                        <h3 className="ganesh-heading">KidZee</h3>
+                        <h4 className="ganesh-subheading">Pre-School</h4>
+                        <h5 className="ganesh-subheading-two">BABAMETTA</h5>
+                        <button className="ganesh-beautiful-button">
+                            kidzee brings out the best in me!
+                        </button>
+                        <p className="ganesh-admission-text">ADMISSIONS OPEN</p>
+                        <p className="ganesh-admission-year">2025-2026</p>
+                        <button className="ganesh-enroll-button" onClick={handleButtonClick}>Enroll Now</button>
+                    </div>
+                </div>
+            </section>
+
+
+
+
 
 
 
@@ -141,8 +190,8 @@ function HomePage() {
                         Let your child step into a magical journey where learning feels like play, and every day is filled with smiles. At Kidzee, we create joyful beginnings for bright futures – shaped by curiosity, care, and creativity.
                     </p>
                     <button className="homepage-mickey-button" onClick={handleButtonClick}>
-      Explore the Kidzee Way
-    </button>
+                        Explore the Kidzee Way
+                    </button>
                 </div>
             </section>
 
@@ -194,7 +243,7 @@ function HomePage() {
                         Learning
                     </h1>
                     <h2 className="homepage-build-foundation-subheading">Admission Open</h2>
-                    <button className="homepage-build-foundation-button">Enroll Now</button>
+                    <button className="homepage-build-foundation-button" onClick={handleButtonClick}>Enroll Now</button>
                 </div>
 
                 <div className="homepage-build-foundation-right">
@@ -234,7 +283,7 @@ function HomePage() {
                         We understand that the early years in the child’s life are important for the overall development. The primary role of parents in these years is to provide their children with an environment that is loving, caring, fun-filled and one which provides happy experiences. As these aspects play a very important role in fostering the developmental areas, like, cognitive development, physical development, socio-emotional development, and so on our objective is to create a home away from home for them to feel safe, secure and happy.
                     </p>
 
-                    <button className="homepage-daycare-button">
+                    <button className="homepage-daycare-button" onClick={handleKnowMoreClick}>
                         Know More <span className="arrow">→</span>
                     </button>
                 </div>
@@ -385,12 +434,6 @@ function HomePage() {
                     <p className="homepage-about-us-description">
                         Our Business Partners don't just take the name, they also take our pedagogy- PéNTEMiND, guidelines to teach, prescribes books/plays to be followed and so on to the ground.
                     </p>
-                    {/*<div className="homepage-about-us-images">
-                        <img src="/Images/baloon.png" alt="Balloon" className="homepage-about-us-image" />
-                        <img src="/Images/pen.png" alt="Pen" className="homepage-about-us-image" />
-                        <img src="/Images/more_fish.png" alt="Fish" className="homepage-about-us-image" />
-                        <img src="/Images/mouse_img.png" alt="Mouse" className="homepage-about-us-image" />
-                    </div> */}
                 </div>
 
                 <div className="homepage-about-us-right">
@@ -430,8 +473,8 @@ function HomePage() {
                             At Kidzee, we blend play, learning, and values through a well-researched curriculum designed for every child’s growth. Powered by Zee Learn Ltd., we bring decades of trust, innovation, and care to every classroom.
                         </p>
                         <div className="homepage-trust-buttons">
-                            <button className="visit-button">Book a Free Visit</button>
-                            <button className="team-button">Meet Our Team</button>
+                            <button className="visit-button" onClick={handleKnowMoreClick}>Book a Free Visit</button>
+                            <button className="team-button" onClick={handleKnowMoreClick}>Meet Our Team</button>
                         </div>
                     </div>
                 </div>

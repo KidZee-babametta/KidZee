@@ -87,12 +87,6 @@ function About() {
                     <p className="homepage-about-us-description">
                         Our Business Partners don't just take the name, they also take our pedagogy- PéNTEMiND, guidelines to teach, prescribes books/plays to be followed and so on to the ground.
                     </p>
-                    {/*<div className="homepage-about-us-images">
-                        <img src="/Images/baloon.png" alt="Balloon" className="homepage-about-us-image" />
-                        <img src="/Images/pen.png" alt="Pen" className="homepage-about-us-image" />
-                        <img src="/Images/more_fish.png" alt="Fish" className="homepage-about-us-image" />
-                        <img src="/Images/mouse_img.png" alt="Mouse" className="homepage-about-us-image" />
-                    </div> */}
                 </div>
 
                 <div className="homepage-about-us-right">
@@ -147,6 +141,10 @@ function About() {
                     </div>
                 </div>
             </section>
+
+
+
+            
 
             <section id="kidzee-advantage" className="section-content kidzee-advantage-section">
                 <div className="kidzee-advantage-left">
