@@ -28,7 +28,7 @@ function HomePage() {
         
     };
     const handleKnowMoreClick = () => {
-        navigate('/contact');
+        navigate('/contact#formsection');
     };
 
     const [index, setIndex] = useState(0);

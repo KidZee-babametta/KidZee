@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './Contact.css';
 
 function Contact() {
     const [mainIndex, setMainIndex] = useState(0);
+    const formRef = useRef();
 
     const mainSlides = [
         "/Images/overlay-main-1.jpg",
@@ -120,25 +121,34 @@ function Contact() {
             </section> */}
 
 
-            <section id="contact-form" className="contact-section">
-                
-                <form className="contact-form">
-                    <h2 className="section-heading">📋 Admission Form</h2>
-                    <label htmlFor="name" className="contact-form-label">Name:</label>
-                    <input type="text" id="name" name="name" required className="contact-form-input" />
+            <section id="ganesh123-contact-form" className="ganesh123-contact-section">
+                <form ref={formRef} className="ganesh123-contact-form">
+                    <span className="ganesh123-heading">Contact Us</span>
 
-                    <label htmlFor="email" className="contact-form-label">Email:</label>
-                    <input type="email" id="email" name="email" required className="contact-form-input" />
+                    <div className="ganesh123-form-group">
+                        <input className="ganesh123-form-input" required type="text" id="name" name="name" />
+                        <label htmlFor="name" className="ganesh123-contact-form-label">Name</label>
+                    </div>
 
-                    <label htmlFor="phone" className="contact-form-label">Phone:</label>
-                    <input type="text" id="phone" name="phone" required className="contact-form-input" />
+                    <div className="ganesh123-form-group">
+                        <input className="ganesh123-form-input" required type="email" id="email" name="email" />
+                        <label htmlFor="email" className="ganesh123-contact-form-label">Email</label>
+                    </div>
 
-                    <label htmlFor="message" className="contact-form-label">Message:</label>
-                    <textarea id="message" name="message" rows="4" required className="contact-form-textarea"></textarea>
+                    <div className="ganesh123-form-group">
+                        <input className="ganesh123-form-input" required type="text" id="phone" name="phone" />
+                        <label htmlFor="phone" className="ganesh123-contact-form-label">Phone</label>
+                    </div>
 
-                    <button type="submit" className="contact-submit-button">Submit</button>
+                    <div className="ganesh123-form-group">
+                        <textarea className="ganesh123-form-input" required id="message" name="message" rows="4"></textarea>
+                        <label htmlFor="message" className="ganesh123-contact-form-label">Message</label>
+                    </div>
+
+                    <button type="submit" className="ganesh123-contact-submit-button">Submit</button>
                 </form>
             </section>
+
 
             <Footer />
         </div>

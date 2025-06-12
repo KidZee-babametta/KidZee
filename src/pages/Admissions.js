@@ -134,7 +134,7 @@ const Admissions = () => {
             <input type="tel" id="parentMobile" name="parent_mobile" placeholder="Enter Parent's Mobile Number" className="admission-input" value={formData.parentMobile} onChange={handleInputChange} required />
             {errors.parentMobile && <p className="error-message">{errors.parentMobile}</p>}
           </div>
-           <button type="submit" className="admission-submit-btn">
+          <button type="submit" className="admission-submit-btn">
             Submit
           </button>
         </form>
@@ -142,9 +142,9 @@ const Admissions = () => {
 
       {popupVisible && (
         <div className="ganesh-popup-card">
-  <h3>Form Submitted Successfully!</h3>
-  <button onClick={() => setPopupVisible(false)} className="ganesh-close-popup-btn">Close</button>
-</div>
+          <h3>Form Submitted Successfully!</h3>
+          <button onClick={() => setPopupVisible(false)} className="ganesh-close-popup-btn">Close</button>
+        </div>
 
       )}
 

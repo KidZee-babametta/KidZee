@@ -801,135 +801,140 @@
   position: relative;
 } */
 
-.contact-form {
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
-  width: 350px;
-  padding: 30px;
-  background-color: #33024b;
-  box-shadow: 0px 15px 60px var(--yellow-1);
-  outline: 1px solid var(--yellow-1);
-  border-radius: 10px;
+.ganesh123-contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #212121;
 }
 
-.section-heading {
-  text-align: center;
-  line-height: 1;
-  color: var(--yellow-1);
-  font-weight: 600;
-  font-size: 32px;
-  margin-bottom: 25px;
-}
-
-.contact-form-label {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--yellow-1);
-  margin-bottom: 5px;
-  text-align: left;
-  width: 100%; 
-}
-
-.contact-form-input,
-.contact-form-textarea {
-  width: 100%; 
-  background: transparent;
+.ganesh123-contact-form {
+  background: linear-gradient(#212121, #212121) padding-box, 
+    linear-gradient(120deg, transparent 25%, #1cb0ff, #40ff99) border-box;
+  border: 4px solid transparent;
+  padding: 32px 24px;
   font-size: 14px;
-  color: var(--yellow-1);
-  border: none;
-  padding: 12px 0;
-  margin: 0;
-  border: 1px solid var(--yellow-1);
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  margin-bottom: 30px;
-  text-align: left; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  width: 500px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
-.contact-form-input::placeholder,
-.contact-form-textarea::placeholder {
-  color: #ccc;
-}
-
-.contact-form-input:focus,
-.contact-form-textarea:focus {
-  outline: none;
-  border-bottom: 1px solid var(--yellow-2);
-  box-shadow: 0 2px var(--yellow-2);
-}
-
-.contact-form-textarea {
-  resize: vertical;
-}
-
-.contact-submit-button {
-  display: block;
-  width: 100%;
-  color: var(--yellow-1);
-  background-color: transparent;
+.ganesh123-heading {
+  font-size: 22px;
   font-weight: 600;
+  color: var(--yellow-1);
+  text-align: center;
+}
+
+.ganesh123-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.ganesh123-contact-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  pointer-events: none;
+  transition: 0.5s;
+  color: var(--yellow-1);
+}
+
+.ganesh123-form-input {
+  color: white;
+  background: transparent;
+  border: 2px solid #414141;
+  border-radius: 5px;
+  padding: 8px;
+  outline: none;
+}
+
+.ganesh123-form-input:focus ~ .ganesh123-contact-form-label,
+.ganesh123-form-input:valid ~ .ganesh123-contact-form-label {
+  top: -16px;
+  left: 0;
+  background: #212121 padding-box;
+  padding: 10px 0 0 0;
+  color: #bdb8b8;
+  font-size: 12px;
+}
+
+.ganesh123-contact-submit-button {
+  border-radius: 5px;
+  padding: 8px;
+  background: #ffffff14;
+  color: #c7c5c5;
+  border: 2px solid #414141;
   font-size: 16px;
-  margin: 20px 0 0 0;
-  padding: 14px;
-  border: 0;
-  outline: 1px solid var(--yellow-1);
-  border-radius: 8px;
-  line-height: 1;
   cursor: pointer;
   transition: all ease-in-out .3s;
 }
 
-.contact-submit-button:hover {
-  background-color: var(--yellow-1);
-  color: #711e9c ;
+.ganesh123-contact-submit-button:hover {
+  background: #212121;
+  color: #1cb0ff;
+}
+
+.ganesh123-contact-form .ganesh123-form-group input:focus,
+.ganesh123-contact-form .ganesh123-form-group textarea:focus {
+  border: 2px solid #1cb0ff;
 }
 
 @media screen and (max-width: 1024px) {
-  .contact-form {
+  .ganesh123-contact-form {
     width: 90%;
     padding: 20px;
   }
 
-  .section-heading {
+  .ganesh123-heading {
     font-size: 28px;
   }
 
-  .contact-form-label {
+  .ganesh123-contact-form-label {
     font-size: 15px;
   }
 
-  .contact-form-input,
-  .contact-form-textarea {
+  .ganesh123-form-input,
+  .ganesh123-form-textarea {
     font-size: 14px;
   }
 
-  .contact-submit-button {
+  .ganesh123-contact-submit-button {
     font-size: 15px;
     padding: 12px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .contact-section {
+  .ganesh123-contact-section {
     padding: 60px 20px;
   }
 
-  .section-heading {
+  .ganesh123-heading {
     font-size: 26px;
   }
 
-  .contact-form-label {
+  .ganesh123-contact-form-label {
     font-size: 14px;
   }
 
-  .contact-form-input,
-  .contact-form-textarea {
+  .ganesh123-form-input,
+  .ganesh123-form-textarea {
     font-size: 14px;
     padding: 10px 0;
   }
 
-  .contact-submit-button {
+  .ganesh123-contact-submit-button {
     font-size: 14px;
     padding: 12px;
   }

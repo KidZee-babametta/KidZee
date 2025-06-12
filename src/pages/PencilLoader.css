@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99999; /* Make sure it's higher than other elements */
+  z-index: 99999; 
 }
 
 .loader-container {
@@ -24,11 +24,6 @@
   width: 10em;
   height: 10em;
 }
-
-/* Other CSS rules here */
-
-
-/* Other CSS rules here */
 
 .pencil__body1,
 .pencil__body2,

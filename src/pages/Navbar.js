@@ -33,8 +33,9 @@ function Navbar() {
     setLoading(true);
     setTimeout(() => {
       navigate(path);
+      window.scrollTo(0,0);
       setLoading(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
