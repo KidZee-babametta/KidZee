@@ -24,7 +24,8 @@ function HomePage() {
     const [expertiseCount, setExpertiseCount] = useState(0);
     const [centresCount, setCentresCount] = useState(0);
     const handleButtonClick = () => {
-        navigate('/admissions');
+        navigate('/admissions#formSection');
+        
     };
     const handleKnowMoreClick = () => {
         navigate('/contact');
@@ -95,11 +96,11 @@ function HomePage() {
             <section className="homepage-main-section">
                 <div className="homepage-heading-container">
                     <img
-                        src="/Images/logo.jpg"
+                        src="/Images/logo-no-bg.png"
                         alt="Kidzee Logo"
                         className="homepage-logo"
                     />
-                    <h1 className="homepage-title">KIDZEE</h1>
+                    {/*<h1 className="homepage-title">KIDZEE</h1> */}
                     <h2 className="homepage-subtitle">PRE- SCHOOL <br />BABAMETTA</h2>
                     {/* <img src="D:/school/public/Images/logo.jpg" alt="Another Image" className="homepage-sub-image" /> */}
                 </div>
@@ -139,12 +140,12 @@ function HomePage() {
                     <div className="ganesh-right-card">
                         <div className="ganesh-logo-container">
                             <img
-                                src="/Images/logo.jpg"
+                                src="/Images/logo-no-bg.png"
                                 alt="Kidzee Logo"
                                 className="ganesh-logo-image"
                             />
                         </div>
-                        <h3 className="ganesh-heading">KidZee</h3>
+                        {/*<h3 className="ganesh-heading">KidZee</h3> */}
                         <h4 className="ganesh-subheading">Pre-School</h4>
                         <h5 className="ganesh-subheading-two">BABAMETTA</h5>
                         <button className="ganesh-beautiful-button">

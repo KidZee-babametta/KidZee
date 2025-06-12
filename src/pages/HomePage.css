@@ -88,11 +88,15 @@
   margin-top: 30px;
 }
 .homepage-logo {
-  width: 200px; 
-  height: 90px;
-  margin-bottom: 0px; 
+  width: 400px;
+  height: 170px;
+  margin-bottom: 0px;
   border-radius: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: 30px;
 }
+
 
 .homepage-sub-image {
   width: 120px;
@@ -358,9 +362,9 @@
 }
 
 .ganesh-logo-image {
-  width: 170px;
+  width: 350px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   border-radius: 12px;
 }
 
