@@ -1,146 +1,124 @@
 import React, { useState } from "react";
-import Navbar from './Navbar';
-import Footer from './Footer';
-import './Admissions.css';
+import { FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
+import "./Footer.css";
 
-function Admissions() {
-  const [studentName, setStudentName] = useState('');
-  const [gender, setGender] = useState('male');
-  const [age, setAge] = useState('');
-  const [parentEmail, setParentEmail] = useState('');
-  const [parentMobile, setParentMobile] = useState('');
+const Footer = () => {
+  const [openSection, setOpenSection] = useState(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const formData = {
-      studentName,
-      gender,
-      age,
-      parentEmail,
-      parentMobile
-    };
-
-    fetch('http://localhost:5000/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        alert('Form submitted successfully!');
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        alert('Error occurred while submitting the form.');
-      });
+  const handleAccordion = (section) => {
+    setOpenSection(openSection === section ? null : section);
   };
 
   return (
-    <div className="admissions">
-      <Navbar />
-      <div className="pad">
-        <section className="admissions-section">
-          <div className="admissions-image-container">
-            <img src="/Images/admission_banner.png" alt="Admissions Banner" className="admissions-image" />
+    <footer className="homepage-footer">
+      <div className="footer-section">
+        <div className="footer-left">
+          <img src="/Images/logo.jpg" alt="Footer Image" className="footer-image"/>
+          <h3 className="footer-heading">Kidzee</h3>
+          {/*<h4 className="footer-subheading">ZEE Learn Limited</h4> */}
+          <p className="footer-address">BABA METTA , Vizianagaram</p>
+          <div className="extra">
+            <img src="/Images/brand-mark.png" alt="Footer Image" className="footer-image1"/>
           </div>
-          <div className="admissions-content">
-            <div className="admissions-left">
-              <h1 className="admissions-heading">Kidzee Preschool</h1>
-              <h2 className="admissions-subheading">Admissions Open for 2025-26</h2>
-              <button className="admissions-enquire-button">Enquire Now</button>
-            </div>
-            <div className="admissions-cards">
-              <div className="admissions-card card-1">
-                <span className="card-number">1</span>
-                <p>Fill the School Admission Inquiry Form on the Website</p>
-              </div>
-              <div className="admissions-card card-2">
-                <span className="card-number">2</span>
-                <p>We will invite you to the nearest Kidzee preschool</p>
-              </div>
-              <div className="admissions-card card-3">
-                <span className="card-number">3</span>
-                <p>Visit the School for Campus Tour</p>
-              </div>
-              <div className="admissions-card card-4">
-                <span className="card-number">4</span>
-                <p>Join the Kidzee Family</p>
-              </div>
-            </div>
-          </div>
-        </section>
+          
+        </div>
 
-        <div className="admission-student-info-section">
-          <h2 className="admission-student-info-title">Student Information</h2>
-          <div className="admission-student-info-form">
-            <div className="admission-student-info-field">
-              <label className="student-name">Student Name:</label>
-              <input
-                type="text"
-                id="student-name"
-                placeholder="Enter Student's Name"
-                className="admission-input"
-                value={studentName}
-                onChange={(e) => setStudentName(e.target.value)}
-              />
+        <div
+          className={`footer-list-item mobile-accordion ${openSection === "playgroup" ? "open" : ""
+            }`}
+        >
+          <div
+            className="footer-list-header"
+            onClick={() => handleAccordion("playgroup")}
+          >
+            <span>PlayGroup</span>
+            <span className="toggle-icon mobile-only">
+              {openSection === "playgroup" ? "-" : "+"}
+            </span>
+          </div>
+          <ul className="sub-list">
+            <li>Nursery</li>
+            <li>Kindergarten</li>
+            <li>Teacher Training Programme</li>
+            <li>Privacy Policy</li>
+            <li>Elementary School</li>
+          </ul>
+        </div>
+
+        <div
+          className={`footer-list-item mobile-accordion ${openSection === "daycare" ? "open" : ""
+            }`}
+        >
+          <div
+            className="footer-list-header"
+            onClick={() => handleAccordion("daycare")}
+          >
+            <span>DayCare</span>
+            <span className="toggle-icon mobile-only">
+              {openSection === "daycare" ? "-" : "+"}
+            </span>
+          </div>
+          <ul className="sub-list">
+            <li>Péntemind</li>
+            <li>Blog</li>
+            <li>In News</li>
+            <li>Locate Us</li>
+            <li>Our Presence</li>
+          </ul>
+        </div>
+
+        <div className={`footer-list-item mobile-accordion ${openSection === "contact" ? "open" : ""}`} >
+          <div className="footer-list-header" onClick={() => handleAccordion("contact")} >
+            <span>Contact Us</span>
+            <span className="toggle-icon mobile-only">
+              {openSection === "contact" ? "-" : "+"}
+            </span>
+          </div>
+          <div className="contact-details">
+            <p>
+              <FaPhoneAlt /> +91 95123 12339
+            </p>
+            <p>
+              <FaEnvelope /> kidzeebabmetta@gmail.com
+            </p>
+            <p>
+              <FaClock /> 09:15 a.m. to 12:15 p.m., Mon-Fri
+            </p>
+          </div>
+          <div className="footer-social">
+            <h4>Social Media</h4>
+            <div className="social-icons">
+              <a href="https://www.instagram.com/reel/DKlVvfgO59-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
+              <a href="https://youtube.com/shorts/79Jae0VpCs4?feature=share" target="_blank" rel="noopener noreferrer">
+                <FaYoutube />
+              </a>
+              <a href="https://www.facebook.com/share/v/1EwKocruYF/" target="_blank" rel="noopener noreferrer">
+                <FaFacebookF />
+              </a>
+              <div className="extra">
+            <img src="/Images/zee-learn.png" alt="Footer Image" className="footer-image1"/>
+          </div>
+
             </div>
-            <div className="admission-student-info-field">
-              <label className="student-gender">Gender:</label>
-              <select
-                id="student-gender"
-                className="admission-input"
-                value={gender}
-                onChange={(e) => setGender(e.target.value)}
-              >
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div className="admission-student-info-field">
-              <label className="student-age">Age:</label>
-              <input
-                type="number"
-                id="student-age"
-                placeholder="Enter Age"
-                className="admission-input"
-                value={age}
-                onChange={(e) => setAge(e.target.value)}
-              />
-            </div>
-            <div className="admission-student-info-field">
-              <label className="parent-email">Parent's Email:</label>
-              <input
-                type="email"
-                id="parent-email"
-                placeholder="Enter Parent's Email"
-                className="admission-input"
-                value={parentEmail}
-                onChange={(e) => setParentEmail(e.target.value)}
-              />
-            </div>
-            <div className="admission-student-info-field">
-              <label className="parent-mobile">Parent's Mobile Number:</label>
-              <input
-                type="tel"
-                id="parent-mobile"
-                placeholder="Enter Parent's Mobile Number"
-                className="admission-input"
-                value={parentMobile}
-                onChange={(e) => setParentMobile(e.target.value)}
-              />
-            </div>
-            <button className="admission-submit-btn" onClick={handleSubmit}>Submit</button>
           </div>
         </div>
       </div>
 
-      <Footer />
-    </div>
+      <div className="footer-bubbles">
+        <img
+          src="/Images/baloon.png"
+          className="footer-bubble footer-bubble-one"
+        />
+        <img
+          src="/Images/more_fish.png"
+          className="footer-bubble footer-bubble-two"
+        />
+      </div>
+    </footer>
   );
-}
+};
 
-export default Admissions;
+export default Footer;
