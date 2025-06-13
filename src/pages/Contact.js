@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './Contact.css';
@@ -6,12 +7,34 @@ import './Contact.css';
 function Contact() {
     const [mainIndex, setMainIndex] = useState(0);
     const formRef = useRef();
+    const location = useLocation();
+
+useEffect(() => {
+    if (location.hash === "#ganesh123-contact-form") {
+        const scrollToSection = () => {
+            const section = document.querySelector(location.hash);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        };
+
+        const timeout = setTimeout(scrollToSection, 200);
+
+        return () => clearTimeout(timeout);
+    }
+}, [location]);
+
+    
 
     const mainSlides = [
         "/Images/overlay-main-1.jpg",
         "/Images/overlay-main-2.jpg",
         "/Images/overlay-main-3.jpg",
     ];
+    
 
     useEffect(() => {
         const intervalMain = setInterval(() => {
@@ -22,6 +45,7 @@ function Contact() {
             clearInterval(intervalMain);
         };
     }, []);
+    
 
     return (
         <div className="contact-page-wrapper">
@@ -37,7 +61,7 @@ function Contact() {
                     <div className="contact-banner-content">
                         <h1 className="contact-heading">Kidzee Preschool</h1>
                         <h2 className="contact-subheading">Admissions Open for 2025-26</h2>
-                        <button className="contact-enquire-button">Enquire Now</button>
+                        {/*<button className="contact-enquire-button">Enquire Now</button> */}
                     </div>
                 </div>
             </section>
@@ -49,7 +73,7 @@ function Contact() {
                     <p className="contact-text">
                         At Kidzee Baba Metta, we provide a vibrant, safe, and stimulating environment where your child blossoms into a confident and curious learner.
                     </p>
-                    <button className="contact-enquire-button">Enquire Now</button>
+                    {/*<button className="contact-enquire-button">Enquire Now</button> */}
                 </div>
                 <div className="contact-right">
                     <div className="contact-slideshow">
@@ -95,7 +119,7 @@ function Contact() {
                 </div>
             </section>
 
-            {/*<section id="contact-info" className="contact-section">
+            <section id="contact-info" className="contact-section">
                 <div className="contact-content-wrapper">
                     <div className="contact-left">
                         <h2 className="contact-heading">📍 Visit Us:</h2>
@@ -118,7 +142,7 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
 
 
             <section id="ganesh123-contact-form" className="ganesh123-contact-section">

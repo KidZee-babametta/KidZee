@@ -8,6 +8,8 @@ import Admissions from './pages/Admissions';
 import Contact from './pages/Contact';
 import Footer from './pages/Footer';
 import PopupCard from './pages/PopupCard';
+import Pentemind from './pages/Pentemind';
+import Programmes from './pages/Programmes';
 import './App.css';
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pentemind" element={<Pentemind />} />
+        <Route path="/programmes" element={<Programmes />} />
       </Routes>
     </Router>
   );

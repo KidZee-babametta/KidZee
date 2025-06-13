@@ -14,13 +14,13 @@ const Footer = () => {
       <div className="ganesh1-footer-section">
         <div className="ganesh1-footer-left">
           <img
-            src="/Images/logo-no-bg.png"
+            src="/Images/logo5.png"
             alt="Footer Image"
             className="ganesh1-footer-image"
           />
-          <p className="ganesh1-footer-address">
+          {/*<p className="ganesh1-footer-address">
             BABA METTA , Vizianagaram
-          </p>
+          </p> */}
           <div className="ganesh1-extra">
             <img
               src="/Images/brand-mark.png"
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
           <div className="ganesh1-contact-details">
             <p>
-              <FaPhoneAlt /> +91 95123 12339 / 38 / 39
+              <FaPhoneAlt /> +91 95123 12337 / 38 / 39
             </p>
             <p>
               <FaEnvelope /> kidzeebabmetta@gmail.com
@@ -119,13 +119,13 @@ const Footer = () => {
           <div className="ganesh1-footer-social">
             <span>Social Media</span>
             <div className="ganesh1-social-icons">
-              <a href="https://www.instagram.com/reel/DKlVvfgO59-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/kidzee_babametta/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
-              <a href="https://youtube.com/shorts/79Jae0VpCs4?feature=share" target="_blank" rel="noopener noreferrer" >
+              <a href="https://www.youtube.com/@kidzeepreschoolbabametta" target="_blank" rel="noopener noreferrer" >
                 <FaYoutube />
               </a>
-              <a href="https://www.facebook.com/share/v/1EwKocruYF/" target="_blank" rel="noopener noreferrer" >
+              <a href="https://www.facebook.com/kidzeepreschoolbabametta/" target="_blank" rel="noopener noreferrer" >
                 <FaFacebookF />
               </a>
               <div className="ganesh1-extra">

@@ -88,13 +88,13 @@
   margin-top: 30px;
 }
 .homepage-logo {
-  width: 400px;
-  height: 170px;
+  width: 360px;
+  height: auto;
   margin-bottom: 0px;
   border-radius: 12px;
   display: block;
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 60px;
 }
 
 
@@ -271,6 +271,26 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hexagon{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 
 
 
@@ -1610,32 +1630,32 @@
 
 
 /* 5th section */
-.homepage-programmes-section {
+.ganesh-homepage-programmes-section {
   text-align: center;
   padding: 80px 40px;
   background-color: #f9f6ff;
 }
 
-.programme-title {
+.ganesh-programme-title {
   font-size: 42px;
   font-weight: 800;
   color: #65318e;
   margin-bottom: 10px;
 }
 
-.programme-divider {
+.ganesh-programme-divider {
   max-width: 120px;
   margin: 0 auto 40px;
 }
 
-.programme-card-container {
+.ganesh-programme-card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 30px;
 }
 
-.programme-card {
+.ganesh-programme-card {
   background-color: transparent;
   border: 2px solid #ccc;
   border-radius: 20px;
@@ -1648,17 +1668,17 @@
   transition: transform 0.3s ease;
 }
 
-.programme-card:hover {
+.ganesh-programme-card:hover {
   transform: translateY(-5px);
 }
 
-.programme-image {
+.ganesh-programme-image {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-.programme-content {
+.ganesh-programme-content {
   background-color: #ffffff;
   padding: 60px 20px 20px;
   border-radius: 0 0 20px 20px;
@@ -1667,182 +1687,186 @@
   clip-path: polygon(0 40px, 0% 100%, 100% 100%, 100% 40px, 95% 0, 90% 40px, 85% 0, 80% 40px, 75% 0, 70% 40px, 65% 0, 60% 40px, 55% 0, 50% 40px, 45% 0, 40% 40px, 35% 0, 30% 40px, 25% 0, 20% 40px, 15% 0, 10% 40px, 5% 0, 0 40px);
 }
 
-.programme-icon {
+.ganesh-programme-icon {
   width: 50px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.programme-heading {
+.ganesh-programme-heading {
   font-size: 20px;
   font-weight: 700;
   color: #6d6d6d;
   margin-bottom: 10px;
 }
 
-.programme-description {
+.ganesh-programme-description {
   font-size: 14px;
   color: #6d6d6d;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
-.programme-readmore {
+.ganesh-programme-readmore {
   color: #6d2a93;
   font-weight: 600;
   cursor: pointer;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .homepage-programmes-section {
+  .ganesh-homepage-programmes-section {
     padding: 60px 30px;
   }
 
-  .programme-title {
+  .ganesh-programme-title {
     font-size: 34px;
   }
 
-  .programme-divider {
+  .ganesh-programme-divider {
     max-width: 100px;
     margin-bottom: 30px;
   }
 
-  .programme-card-container {
+  .ganesh-programme-card-container {
     gap: 20px;
   }
 
-  .programme-card {
+  .ganesh-programme-card {
     width: 23%;
     border-radius: 16px;
   }
 
-  .programme-image {
+  .ganesh-programme-image {
     height: 180px;
   }
 
-  .programme-content {
+  .ganesh-programme-content {
     padding: 50px 16px 16px;
     border-radius: 0 0 16px 16px;
     margin-top: -35px;
   }
 
-  .programme-icon {
+  .ganesh-programme-icon {
     width: 40px;
   }
 
-  .programme-heading {
+  .ganesh-programme-heading {
     font-size: 18px;
   }
 
-  .programme-description {
+  .ganesh-programme-description {
     font-size: 13px;
   }
 
-  .programme-readmore {
+  .ganesh-programme-readmore {
     font-size: 14px;
   }
 }
+
 @media screen and (max-width: 767px) {
-  .homepage-programmes-section {
+  .ganesh-homepage-programmes-section {
     padding: 50px 20px;
   }
 
-  .programme-title {
+  .ganesh-programme-title {
     font-size: 28px;
   }
 
-  .programme-divider {
+  .ganesh-programme-divider {
     max-width: 80px;
     margin-bottom: 20px;
   }
 
-  .programme-card-container {
+  .ganesh-programme-card-container {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
 
-  .programme-card {
+  .ganesh-programme-card {
     width: 47%;
     border-radius: 14px;
   }
 
-  .programme-image {
+  .ganesh-programme-image {
     height: 160px;
   }
 
-  .programme-content {
+  .ganesh-programme-content {
     padding: 45px 14px 14px;
     border-radius: 0 0 14px 14px;
     margin-top: -30px;
   }
 
-  .programme-icon {
+  .ganesh-programme-icon {
     width: 36px;
   }
 
-  .programme-heading {
+  .ganesh-programme-heading {
     font-size: 16px;
   }
 
-  .programme-description {
+  .ganesh-programme-description {
     font-size: 12px;
   }
 
-  .programme-readmore {
+  .ganesh-programme-readmore {
     font-size: 13px;
   }
 }
+
 @media screen and (max-width: 450px) {
-  .homepage-programmes-section {
+  .ganesh-homepage-programmes-section {
     padding: 40px 15px;
   }
 
-  .programme-title {
+  .ganesh-programme-title {
     font-size: 24px;
   }
 
-  .programme-divider {
+  .ganesh-programme-divider {
     max-width: 60px;
     margin-bottom: 15px;
   }
 
-  .programme-card-container {
+  .ganesh-programme-card-container {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
 
-  .programme-card {
+  .ganesh-programme-card {
     width: 47%;
     border-radius: 12px;
   }
 
-  .programme-image {
+  .ganesh-programme-image {
     height: 200px;
   }
 
-  .programme-content {
+  .ganesh-programme-content {
     padding: 40px 12px 12px;
     border-radius: 0 0 12px 12px;
     margin-top: -25px;
   }
 
-  .programme-icon {
+  .ganesh-programme-icon {
     width: 32px;
   }
 
-  .programme-heading {
+  .ganesh-programme-heading {
     font-size: 14px;
   }
 
-  .programme-description {
+  .ganesh-programme-description {
     font-size: 10px;
   }
 
-  .programme-readmore {
+  .ganesh-programme-readmore {
     font-size: 12px;
   }
 }
+
 
 
 

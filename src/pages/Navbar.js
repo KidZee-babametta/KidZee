@@ -7,6 +7,8 @@ function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [programmesDropdownOpen, setProgrammesDropdownOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -29,18 +31,24 @@ function Navbar() {
     (location.pathname === '/' && path === '') ||
     location.pathname === `/${path}`;
 
-  const handleLinkClick = (path) => {
+  const handleLinkClick = (path, scrollToId = null) => {
     setLoading(true);
     setTimeout(() => {
       navigate(path);
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
       setLoading(false);
-    }, 2000);
+      if (scrollToId) {
+        setTimeout(() => {
+          const section = document.getElementById(scrollToId);
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }, 1200);
   };
 
   return (
     <>
-      {loading && <PencilLoader />} 
+      {loading && <PencilLoader />}
       <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
         <div className="navbar-container">
           <img src="/Images/logo1.jpg" alt="Logo" className="logo" />
@@ -52,20 +60,70 @@ function Navbar() {
             </div>
           </div>
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            {['home', 'about', 'gallery', 'admissions', 'contact'].map(link => (
-              <li key={link}>
-                <Link
-                  to={`/${link === 'home' ? '' : link}`}
-                  className={isActive(link === 'home' ? '' : link) ? 'active' : ''}
-                  onClick={(e) => {
-                    e.preventDefault(); 
-                    handleLinkClick(`/${link === 'home' ? '' : link}`); 
-                  }}
-                >
-                  {link.charAt(0).toUpperCase() + link.slice(1)}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link to="/" className={isActive('') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/'); }}>
+                Home
+              </Link>
+            </li>
+            <li
+              className="dropdown"
+              onMouseEnter={() => setAboutDropdownOpen(true)}
+              onMouseLeave={() => setAboutDropdownOpen(false)}
+            >
+              <Link to="/about" className={isActive('about') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/about'); }}>
+                About
+              </Link>
+              {aboutDropdownOpen && (
+                <ul className="dropdown-menu">
+                  <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'legacy'); }}>
+                    Legacy
+                  </li>
+                  <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'kidzee-advantage'); }}>
+                    Kidzee Advantage
+                  </li>
+                  <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'vision-mission'); }}>
+                    Vision & Mission
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li
+              className="dropdown"
+              onMouseEnter={() => setProgrammesDropdownOpen(true)}
+              onMouseLeave={() => setProgrammesDropdownOpen(false)}
+            >
+              <Link to="/programmes" className={isActive('programmes') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes'); }}>
+                Programmes
+              </Link>
+              {programmesDropdownOpen && (
+                <ul className="dropdown-menu">
+                  <li onClick={(e) => e.preventDefault()}>Play Group</li>
+                  <li onClick={(e) => e.preventDefault()}>Nursery</li>
+                  <li onClick={(e) => e.preventDefault()}>Teacher Training</li>
+                  <li onClick={(e) => e.preventDefault()}>Day Care</li>
+                </ul>
+              )}
+            </li>
+            <li>
+              <Link to="/PenteMind" className={isActive('PenteMind') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/PenteMind'); }}>
+                PenteMind
+              </Link>
+            </li>
+            <li>
+              <Link to="/gallery" className={isActive('gallery') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/gallery'); }}>
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link to="/admissions" className={isActive('admissions') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/admissions'); }}>
+                Admissions
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className={isActive('contact') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/contact'); }}>
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

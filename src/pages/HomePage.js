@@ -25,10 +25,10 @@ function HomePage() {
     const [centresCount, setCentresCount] = useState(0);
     const handleButtonClick = () => {
         navigate('/admissions#formSection');
-        
+
     };
     const handleKnowMoreClick = () => {
-        navigate('/contact#formsection');
+        navigate('/contact#ganesh123-contact-form');
     };
 
     const [index, setIndex] = useState(0);
@@ -96,12 +96,12 @@ function HomePage() {
             <section className="homepage-main-section">
                 <div className="homepage-heading-container">
                     <img
-                        src="/Images/logo-no-bg.png"
+                        src="/Images/logo5.png"
                         alt="Kidzee Logo"
                         className="homepage-logo"
                     />
                     {/*<h1 className="homepage-title">KIDZEE</h1> */}
-                    <h2 className="homepage-subtitle">PRE- SCHOOL <br />BABAMETTA</h2>
+                    {/*<h2 className="homepage-subtitle">PRE- SCHOOL <br />BABAMETTA</h2> */}
                     {/* <img src="D:/school/public/Images/logo.jpg" alt="Another Image" className="homepage-sub-image" /> */}
                 </div>
                 <div className="homepage-slideshow-wrapper">
@@ -304,57 +304,86 @@ function HomePage() {
             </section>
 
 
+            <div className='hexagon'>
+                <div className="programme-left">
+                    <div className="programme-hex-container">
+                        <div className="programme-hex programme-hex1">
+                            <img src="/Images/hexagon1.jpg" alt="Playgroup Image 1" />
+                        </div>
+                        <div className="programme-hex programme-hex2">
+                            <img src="/Images/hexagon2.jpg" alt="Playgroup Image 2" />
+                        </div>
+                        <div className="programme-hex programme-hex3">
+                            <img src="/Images/hexagon3.jpg" alt="Playgroup Image 3" />
+                        </div>
+                        <div className="programme-hex programme-hex4">
+                            <img src="/Images/hexagon4.jpg" alt="Playgroup Image 4" />
+                        </div>
+                        <div className="programme-hex programme-hex5">
+                            <img src="/Images/hexagon5.jpg" alt="Playgroup Image 5" />
+                        </div>
+                        <div className="programme-hex programme-hex6">
+                            <img src="/Images/hexagon6.jpg" alt="Playgroup Image 6" />
+                        </div>
+                        <div className="programme-hex programme-hex7">
+                            <img src="/Images/hexagon7.jpg" alt="Playgroup Image 7" />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <section className="homepage-programmes-section">
-                <h2 className="programme-title">Programmes</h2>
-                <img src="/Images/bottom_img.png" alt="Decoration" className="programme-divider" />
 
-                <div className="programme-card-container">
-                    <div className="programme-card">
-                        <img src="/Images/card1.jpg" alt="PlayGroup" className="programme-image" />
-                        <div className="programme-content">
-                            <img src="/Images/playgroup.png" alt="PlayGroup Icon" className="programme-icon" />
-                            <h3 className="programme-heading">PlayGroup</h3>
-                            <p className="programme-description">
+
+            <section className="ganesh-homepage-programmes-section">
+                <h2 className="ganesh-programme-title">Programmes</h2>
+                <img src="/Images/bottom_img.png" alt="Decoration" className="ganesh-programme-divider" />
+
+                <div className="ganesh-programme-card-container">
+                    <div className="ganesh-programme-card">
+                        <img src="/Images/card1.jpg" alt="PlayGroup" className="ganesh-programme-image" />
+                        <div className="ganesh-programme-content">
+                            <img src="/Images/playgroup.png" alt="PlayGroup Icon" className="ganesh-programme-icon" />
+                            <h3 className="ganesh-programme-heading">PlayGroup</h3>
+                            <p className="ganesh-programme-description">
                                 Children in this age group as identified as Toddlers. Children are born curious. They begin to explore the...
                             </p>
-                            <span className="programme-readmore">Read More</span>
+                            <span className="ganesh-programme-readmore">Read More</span>
                         </div>
                     </div>
 
-                    <div className="programme-card">
-                        <img src="/Images/card2.jpg" alt="Nursery" className="programme-image" />
-                        <div className="programme-content">
-                            <img src="/Images/nursery.png" alt="Nursery Icon" className="programme-icon" />
-                            <h3 className="programme-heading">Nursery</h3>
-                            <p className="programme-description">
+                    <div className="ganesh-programme-card">
+                        <img src="/Images/card2.jpg" alt="Nursery" className="ganesh-programme-image" />
+                        <div className="ganesh-programme-content">
+                            <img src="/Images/nursery.png" alt="Nursery Icon" className="ganesh-programme-icon" />
+                            <h3 className="ganesh-programme-heading">Nursery</h3>
+                            <p className="ganesh-programme-description">
                                 The child is now identified as a Pre-schooler. (Mandatory level 1 of Foundational Stage as per NEP)...
                             </p>
-                            <span className="programme-readmore">Read More</span>
+                            <span className="ganesh-programme-readmore">Read More</span>
                         </div>
                     </div>
 
-                    <div className="programme-card">
-                        <img src="/Images/card3.jpg" alt="KG" className="programme-image" />
-                        <div className="programme-content">
-                            <img src="/Images/jk.png" alt="KG Icon" className="programme-icon" />
-                            <h3 className="programme-heading">Junior KG. / Senior KG.</h3>
-                            <p className="programme-description">
+                    <div className="ganesh-programme-card">
+                        <img src="/Images/card3.jpg" alt="KG" className="ganesh-programme-image" />
+                        <div className="ganesh-programme-content">
+                            <img src="/Images/jk.png" alt="KG Icon" className="ganesh-programme-icon" />
+                            <h3 className="ganesh-programme-heading">Junior KG. / Senior KG.</h3>
+                            <p className="ganesh-programme-description">
                                 This is level 2 and 3 of Foundational Stage 1 - Mandatory as per NEP...
                             </p>
-                            <span className="programme-readmore">Read More</span>
+                            <span className="ganesh-programme-readmore">Read More</span>
                         </div>
                     </div>
 
-                    <div className="programme-card">
-                        <img src="/Images/card4.jpg" alt="Teacher Training" className="programme-image" />
-                        <div className="programme-content">
-                            <img src="/Images/teacher.png" alt="Teacher Icon" className="programme-icon" />
-                            <h3 className="programme-heading">Teacher Training Programme</h3>
-                            <p className="programme-description">
+                    <div className="ganesh-programme-card">
+                        <img src="/Images/card4.jpg" alt="Teacher Training" className="ganesh-programme-image" />
+                        <div className="ganesh-programme-content">
+                            <img src="/Images/teacher.png" alt="Teacher Icon" className="ganesh-programme-icon" />
+                            <h3 className="ganesh-programme-heading">Teacher Training Programme</h3>
+                            <p className="ganesh-programme-description">
                                 Zee Learn Preschool Teacher Training Programme has set unrivalled standards...
                             </p>
-                            <span className="programme-readmore">Read More</span>
+                            <span className="ganesh-programme-readmore">Read More</span>
                         </div>
                     </div>
                 </div>

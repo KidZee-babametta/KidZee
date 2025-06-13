@@ -48,7 +48,7 @@ const Admissions = () => {
     if (!validateForm()) return;
     setLoading(true);
     emailjs.sendForm(
-      "service_kc4bgd5data:imag",
+      "service_kc4bgd5",
       "template_7drfrbp",
       formRef.current,
       "64a9xwGeWZSSrYToE"
@@ -72,7 +72,7 @@ const Admissions = () => {
             <div className="admissions-left">
               <h1 className="admissions-heading">Kidzee Preschool</h1>
               <h2 className="admissions-subheading">Admissions Open for 2025-26</h2>
-              <button className="admissions-enquire-button">Enquire Now</button>
+              {/*<button className="admissions-enquire-button">Enquire Now</button> */}
             </div>
             <div className="admissions-cards">
               <div className="admissions-card card-1"><span className="card-number">1</span><p>Fill the School Admission Inquiry Form on the Website</p></div>
@@ -92,7 +92,7 @@ const Admissions = () => {
             Learning
           </h1>
           <h2 className="homepage-build-foundation-subheading">Admission Open</h2>
-          <button className="homepage-build-foundation-button">Enroll Now</button>
+          {/*<button className="homepage-build-foundation-button">Enroll Now</button> */}
         </div>
         <div className="homepage-build-foundation-right">
           <img src="/Images/home_header.png" alt="Main Image" className="homepage-build-foundation-image" />
@@ -102,11 +102,11 @@ const Admissions = () => {
       <div className="admission-student-info-section">
         <h2 className="admission-student-info-title">Student Information</h2>
         <form ref={formRef} onSubmit={handleSubmit} className="admission-student-info-form">
-          <input
+          {/*<input
             type="hidden"
             name="reply_to"
             value={formData.parentEmail}
-          />
+          /> */}
           <input type="hidden" name="title" value="Admission Inquiry" />
           <input type="hidden" name="message" value="Any additional message" />
           <div className="admission-student-info-field">
@@ -134,7 +134,7 @@ const Admissions = () => {
             <input type="tel" id="parentMobile" name="parent_mobile" placeholder="Enter Parent's Mobile Number" className="admission-input" value={formData.parentMobile} onChange={handleInputChange} required />
             {errors.parentMobile && <p className="error-message">{errors.parentMobile}</p>}
           </div>
-          <button type="submit" className="admission-submit-btn">
+           <button type="submit" className="admission-submit-btn">
             Submit
           </button>
         </form>
@@ -142,9 +142,9 @@ const Admissions = () => {
 
       {popupVisible && (
         <div className="ganesh-popup-card">
-          <h3>Form Submitted Successfully!</h3>
-          <button onClick={() => setPopupVisible(false)} className="ganesh-close-popup-btn">Close</button>
-        </div>
+  <h3>Form Submitted Successfully!</h3>
+  <button onClick={() => setPopupVisible(false)} className="ganesh-close-popup-btn">Close</button>
+</div>
 
       )}
 

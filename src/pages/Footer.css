@@ -264,6 +264,10 @@
     gap: 15px;
     padding: 20px 10px;
   }
+  .ganesh1-footer-address {
+  font-size: 14px;
+  margin-top: 15px;
+}
 
   .ganesh1-footer-left {
     text-align: left;
@@ -285,7 +289,7 @@
 
   .ganesh1-toggle-icon {
     font-size: 24px;
-    margin-left: 280px;
+    margin-left: 200px;
   }
 
   .ganesh1-footer-list-item.ganesh1-mobile-accordion .ganesh1-sub-list,
@@ -317,8 +321,7 @@
     width: 120px;
     margin-top: 15px;
     border-radius: 8px;
-    align-self: center;
-    margin-left: -18px;
+    margin-left: -5px;
   }
   .ganesh1-footer-image2 {
     width: 80px;
