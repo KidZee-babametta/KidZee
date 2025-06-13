@@ -9,32 +9,32 @@ function Contact() {
     const formRef = useRef();
     const location = useLocation();
 
-useEffect(() => {
-    if (location.hash === "#ganesh123-contact-form") {
-        const scrollToSection = () => {
-            const section = document.querySelector(location.hash);
-            if (section) {
-                section.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }
-        };
+    useEffect(() => {
+        if (location.hash === "#ganesh123-contact-form") {
+            const scrollToSection = () => {
+                const section = document.querySelector(location.hash);
+                if (section) {
+                    section.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            };
 
-        const timeout = setTimeout(scrollToSection, 200);
+            const timeout = setTimeout(scrollToSection, 200);
 
-        return () => clearTimeout(timeout);
-    }
-}, [location]);
+            return () => clearTimeout(timeout);
+        }
+    }, [location]);
 
-    
+
 
     const mainSlides = [
         "/Images/overlay-main-1.jpg",
         "/Images/overlay-main-2.jpg",
         "/Images/overlay-main-3.jpg",
     ];
-    
+
 
     useEffect(() => {
         const intervalMain = setInterval(() => {
@@ -45,7 +45,7 @@ useEffect(() => {
             clearInterval(intervalMain);
         };
     }, []);
-    
+
 
     return (
         <div className="contact-page-wrapper">
@@ -66,7 +66,7 @@ useEffect(() => {
                 </div>
             </section>
 
-            <section id="admissions" className="contact-section">
+            <section id="admissions" className="contact-section2">
                 <div className="contact-left">
                     <h1 className="contact-heading">Welcome to Kidzee Baba Metta, Vizianagaram</h1>
                     <p className="contact-description">“Nurturing Gen-Next with Love, Learning & Safety”</p>
@@ -88,61 +88,65 @@ useEffect(() => {
 
 
 
-            <section id="features" className="infrastructure-section">
-                <h2 className="infrastructure-heading">✨ Our State-of-the-Art Infrastructure Includes:</h2>
-                <div className="infrastructure-gallery">
-                    <img
-                        src="/Images/legacy1.jpg"
-                        alt="Legacy Feature"
-                        className="infrastructure-image"
-                    />
-                    <img
-                        src="/Images/legacy2.jpg"
-                        alt="Legacy Feature"
-                        className="infrastructure-image"
-                    />
-                    <img
-                        src="/Images/legacy3.jpg"
-                        alt="Legacy Feature"
-                        className="infrastructure-image"
-                    />
-                    <img
-                        src="/Images/legacy4.jpg"
-                        alt="Legacy Feature"
-                        className="infrastructure-image"
-                    />
-                    <img
-                        src="/Images/legacy5.jpg"
-                        alt="Legacy Feature"
-                        className="infrastructure-image"
-                    />
-                </div>
-            </section>
+            <section id="features" className="run-infrastructure-section">
+  <h2 className="run-infrastructure-heading">✨ Our State-of-the-Art Infrastructure Includes:</h2>
+  <div className="run-infrastructure-gallery">
+    <img
+      src="/Images/legacy1.jpg"
+      alt="Legacy Feature"
+      className="run-infrastructure-image"
+    />
+    <img
+      src="/Images/legacy2.jpg"
+      alt="Legacy Feature"
+      className="run-infrastructure-image"
+    />
+    <img
+      src="/Images/legacy3.jpg"
+      alt="Legacy Feature"
+      className="run-infrastructure-image"
+    />
+    <img
+      src="/Images/legacy4.jpg"
+      alt="Legacy Feature"
+      className="run-infrastructure-image"
+    />
+    <img
+      src="/Images/legacy5.jpg"
+      alt="Legacy Feature"
+      className="run-infrastructure-image"
+    />
+  </div>
+</section>
 
-            <section id="contact-info" className="contact-section">
-                <div className="contact-content-wrapper">
-                    <div className="contact-left">
-                        <h2 className="contact-heading">📍 Visit Us:</h2>
-                        <p className="contact-info-text">Backside of Devi Park, MIG-364, Babametta, Vizianagaram</p>
-                        <h3 className="section-heading">📞 Contact for Admissions:</h3>
-                        <p className="contact-info-text">📱 95 123 123 37 / 95 123 123 38 / 95 123 123 39</p>
-                        <h3 className="section-heading">📩 Email:</h3>
-                        <p className="contact-info-text">kidzeebabamettavzm@gmail.com</p>
-                        <h3 className="section-heading">📲 Follow Us on Social Media:</h3>
-                        <p className="contact-info-text">📸 Instagram: @kidzee_babametta</p>
-                        <p className="contact-info-text">📘 Facebook: @kidzee_babametta</p>
-                        <p className="contact-info-text">▶ YouTube: @kidzeepreschoolbabametta</p>
-                    </div>
-                    <div className="contact-right">
-                        <div className="contact-background">
-                            <img src="/Images/baloon.png" alt="Background Image" className="contact-background-img balloon" />
-                            <img src="/Images/more_fish.png" alt="Background Image" className="contact-background-img more-fish" />
-                            <img src="/Images/mouse_img.png" alt="Background Image" className="contact-background-img mouse-img" />
-                            <img src="/Images/pen.png" alt="Background Image" className="contact-background-img pen" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+<section id="contact-info" className="preethi-contact-section1">
+  <div className="preethi-contact-cards-wrapper">
+    <div className="preethi-contact-card">
+      <h3 className="preethi-section-heading">📞 Contact for Admissions:</h3>
+      <p className="preethi-contact-info-text">📱 95 123 123 37 / 95 123 123 38 / 95 123 123 39</p>
+    </div>
+    <div className="preethi-contact-card">
+      <h3 className="preethi-section-heading">📩 Email:</h3>
+      <p className="preethi-contact-info-text">kidzeebabamettavzm@gmail.com</p>
+    </div>
+    <div className="preethi-contact-card">
+      <h3 className="preethi-section-heading">📲 Social Media</h3>
+      <div className="preethi-social-media-icons">
+        <i className="fab fa-instagram"></i>
+        <i className="fab fa-facebook-f"></i>
+        <i className="fab fa-youtube"></i>
+      </div>
+    </div>
+    <div className="preethi-contact-card">
+      <h3 className="preethi-section-heading">📍 Visit Us</h3>
+      <p className="preethi-contact-info-text">Backside of Devi Park, MIG-364, Babametta, Vizianagaram</p>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 
             <section id="ganesh123-contact-form" className="ganesh123-contact-section">

@@ -61,24 +61,71 @@ const Admissions = () => {
   };
 
   return (
-    <div className="ad">
+    <div className="preethi-ad">
       <Navbar />
-      <div className="pad">
-        <section className="admissions-section">
-          <div className="admissions-image-container">
-            <img src="/Images/admission_banner.png" alt="Admissions Banner" className="admissions-image" />
+      <div className="preethi-pad">
+        <section className="preethi-admissions-section">
+          <div className="preethi-admissions-image-container">
+            <img src="/Images/admission_banner.png" alt="Admissions Banner" className="preethi-admissions-image" />
           </div>
-          <div className="admissions-content">
-            <div className="admissions-left">
-              <h1 className="admissions-heading">Kidzee Preschool</h1>
-              <h2 className="admissions-subheading">Admissions Open for 2025-26</h2>
-              {/*<button className="admissions-enquire-button">Enquire Now</button> */}
+
+          <div className="preethi-admissions-main-content">
+            <div className="preethi-admissions-left-side">
+              <div className="preethi-admissions-left">
+                <h1 className="preethi-admissions-heading">Kidzee Preschool</h1>
+                <h2 className="preethi-admissions-subheading">Admissions Open for 2025-26</h2>
+              </div>
+              <div className="preethi-admissions-cards">
+                <div className="preethi-admissions-card preethi-card-1"><span className="preethi-card-number">1</span><p>Fill the School Admission Inquiry Form on the Website</p></div>
+                <div className="preethi-admissions-card preethi-card-2"><span className="preethi-card-number">2</span><p>We provide exceptional student care and early learning experiences</p></div>
+                <div className="preethi-admissions-card preethi-card-3"><span className="preethi-card-number">3</span><p>Visit the School for Campus Tour</p></div>
+                <div className="preethi-admissions-card preethi-card-4"><span className="preethi-card-number">4</span><p>Join the Kidzee Family</p></div>
+              </div>
             </div>
-            <div className="admissions-cards">
-              <div className="admissions-card card-1"><span className="card-number">1</span><p>Fill the School Admission Inquiry Form on the Website</p></div>
-              <div className="admissions-card card-2"><span className="card-number">2</span><p>We provide exceptional student care and early learning experiences</p></div>
-              <div className="admissions-card card-3"><span className="card-number">3</span><p>Visit the School for Campus Tour</p></div>
-              <div className="admissions-card card-4"><span className="card-number">4</span><p>Join the Kidzee Family</p></div>
+
+            <div className="preethi-admissions-right-side">
+              <div className="preethi-admission-student-info-section">
+                <h2 className="preethi-admission-student-info-title">Student Information</h2>
+                <form ref={formRef} onSubmit={handleSubmit} className="preethi-admission-student-info-form">
+                  <input type="hidden" name="title" value="Admission Inquiry" />
+                  <input type="hidden" name="message" value="Any additional message" />
+                  <div className="preethi-admission-student-info-field">
+                    <label>Student Name:</label>
+                    <input type="text" id="studentName" name="student_name" placeholder="Enter Student's Name" className="preethi-admission-input" value={formData.studentName} onChange={handleInputChange} />
+                  </div>
+                  <div className="preethi-admission-student-info-field">
+                    <label>Gender:</label>
+                    <select id="gender" name="gender" className="preethi-admission-input" value={formData.gender} onChange={handleInputChange}>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div className="preethi-admission-student-info-field">
+                    <label>Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Enter Age" className="preethi-admission-input" value={formData.age} onChange={handleInputChange} />
+                  </div>
+                  <div className="preethi-admission-student-info-field">
+                    <label>Parent's Email:</label>
+                    <input type="email" id="parentEmail" name="parent_email" placeholder="Enter Parent's Email" className="preethi-admission-input" value={formData.parentEmail} onChange={handleInputChange} />
+                  </div>
+                  <div className="preethi-admission-student-info-field">
+                    <label>Parent's Mobile Number:</label>
+                    <input type="tel" id="parentMobile" name="parent_mobile" placeholder="Enter Parent's Mobile Number" className="preethi-admission-input" value={formData.parentMobile} onChange={handleInputChange} required />
+                    {errors.parentMobile && <p className="preethi-error-message">{errors.parentMobile}</p>}
+                  </div>
+                  <button type="submit" className="preethi-admission-submit-btn">
+                    Submit
+                  </button>
+                </form>
+
+                {popupVisible && (
+                  <div className="preethi-ganesh-popup-card">
+                    <h3>Form Submitted Successfully!</h3>
+                    <button onClick={() => setPopupVisible(false)} className="preethi-ganesh-close-popup-btn">Close</button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </section>
@@ -92,61 +139,16 @@ const Admissions = () => {
             Learning
           </h1>
           <h2 className="homepage-build-foundation-subheading">Admission Open</h2>
-          {/*<button className="homepage-build-foundation-button">Enroll Now</button> */}
         </div>
+
         <div className="homepage-build-foundation-right">
-          <img src="/Images/home_header.png" alt="Main Image" className="homepage-build-foundation-image" />
+          <img
+            src="/Images/home_header.png"
+            alt="Main Image"
+            className="homepage-build-foundation-image"
+          />
         </div>
       </section>
-
-      <div className="admission-student-info-section">
-        <h2 className="admission-student-info-title">Student Information</h2>
-        <form ref={formRef} onSubmit={handleSubmit} className="admission-student-info-form">
-          {/*<input
-            type="hidden"
-            name="reply_to"
-            value={formData.parentEmail}
-          /> */}
-          <input type="hidden" name="title" value="Admission Inquiry" />
-          <input type="hidden" name="message" value="Any additional message" />
-          <div className="admission-student-info-field">
-            <label>Student Name:</label>
-            <input type="text" id="studentName" name="student_name" placeholder="Enter Student's Name" className="admission-input" value={formData.studentName} onChange={handleInputChange} />
-          </div>
-          <div className="admission-student-info-field">
-            <label>Gender:</label>
-            <select id="gender" name="gender" className="admission-input" value={formData.gender} onChange={handleInputChange}>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div className="admission-student-info-field">
-            <label>Age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter Age" className="admission-input" value={formData.age} onChange={handleInputChange} />
-          </div>
-          <div className="admission-student-info-field">
-            <label>Parent's Email:</label>
-            <input type="email" id="parentEmail" name="parent_email" placeholder="Enter Parent's Email" className="admission-input" value={formData.parentEmail} onChange={handleInputChange} />
-          </div>
-          <div className="admission-student-info-field">
-            <label>Parent's Mobile Number:</label>
-            <input type="tel" id="parentMobile" name="parent_mobile" placeholder="Enter Parent's Mobile Number" className="admission-input" value={formData.parentMobile} onChange={handleInputChange} required />
-            {errors.parentMobile && <p className="error-message">{errors.parentMobile}</p>}
-          </div>
-           <button type="submit" className="admission-submit-btn">
-            Submit
-          </button>
-        </form>
-      </div>
-
-      {popupVisible && (
-        <div className="ganesh-popup-card">
-  <h3>Form Submitted Successfully!</h3>
-  <button onClick={() => setPopupVisible(false)} className="ganesh-close-popup-btn">Close</button>
-</div>
-
-      )}
 
       <Footer />
     </div>

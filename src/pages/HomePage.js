@@ -24,7 +24,7 @@ function HomePage() {
     const [expertiseCount, setExpertiseCount] = useState(0);
     const [centresCount, setCentresCount] = useState(0);
     const handleButtonClick = () => {
-        navigate('/admissions#formSection');
+        navigate('/admissions');
 
     };
     const handleKnowMoreClick = () => {

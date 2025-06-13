@@ -1,16 +1,19 @@
-.ad{
+/*.ad{
     background-color: #ebe1ff;
-     overflow-x: hidden;
-     font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    font-family: 'Outfit', sans-serif;
 }
+
 .admissions-section {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
   background-color: #ebe1ff;
   width: 100%;
-  margin-bottom: 160px;
+  margin-bottom: 300px;
+  height: auto;
 }
 
 .admissions-image-container {
@@ -26,20 +29,47 @@
   border-radius: 20px;
 }
 
-.admissions-content {
+.admissions-main-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 50px;
-  position: absolute;
-  top: 20%;
   width: 100%;
-  margin-bottom: 150px;
+  gap: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.admissions-left-side {
+  margin-top: 60px;
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  width: 50%;
+}
+
+.admissions-right-side {
+  margin-top: 60px;
+  width: 50%;
+  flex: 0 0 50%;
+  display: flex;
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  height: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: none;
+  margin-left: 0px;
 }
 
 .admissions-left {
-    width: 500px;
-  flex: 0 0 50%;
   color: white;
 }
 
@@ -70,14 +100,11 @@
 }
 
 .admissions-cards {
-    width: 600px;
   display: flex;
-  flex: 0 0 60%;
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
-  margin-bottom: 80px;
-
+  margin-top: 30px;
 }
 
 .admissions-card {
@@ -91,12 +118,12 @@
   height: fit-content;
   color: white;
 }
+
 .admissions-card p {
   font-size: 15px; 
   font-weight: 600;
   color: white;
 }
-
 
 .card-1 {
   margin-top: 0;
@@ -125,142 +152,49 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: none;
 }
-
 
 @media screen and (max-width: 1024px) {
-  .admissions-section {
-    flex-direction: row;
-    padding: 0px;
-    justify-content: space-between;
-  }
-
-  .admissions-content {
-    flex-direction: row;
-    padding: 20px 20px;
-    margin-bottom: 100px;
-    align-items: flex-start;
-  }
-
-  .admissions-left {
-    width: 30%;
-    margin-bottom: 0;
-  }
-
-  .admissions-heading {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-
-  .admissions-subheading {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .admissions-enquire-button {
-    font-size: 14px;
-    padding: 12px 25px;
-  }
-
-  .admissions-cards {
-    max-width: 500px;
-    width: 60%;
+  .admissions-main-content {
     flex-direction: column;
-    gap: 20px;
-    align-items: self-start;
+    padding: 30px;
   }
 
-  .admissions-card {
-    width: 120px;
-    height: 50px;
-    padding: 10px;
-    font-size: 14px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #c786f9;
-    border-radius: 8px;
-  }
-
-  .admissions-card p {
-    width: 100%;
-    padding: 5px;
-    font-size: 10px;
-    color: white;
-    text-align: center;
-  }
-
-  .card-number {
-    font-size: 25px;
-    width: 35px;
-    height: 35px;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .admissions-left-side, .admissions-right-side {
+    max-width: 100%;
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  .admissions-section {
+  .admissions-main-content {
     flex-direction: column;
-    padding: 0px;
-    justify-content: center;
+    padding: 25px;
     align-items: center;
   }
 
-  .admissions-content {
-    flex-direction: column;
-    padding: 25px;
-    margin-bottom: 80px;
-    display: flex;
-    align-items: center;  
-    justify-content: center; 
-  }
-
-  .admissions-left {
-    width: 90%;
-    margin-bottom: 20px;
-    text-align: center; 
+  .admissions-left-side {
+    width: 100%;
+    align-items: center;
   }
 
   .admissions-heading {
     font-size: 32px;
-    margin-bottom: 10px;
+    text-align: center;
   }
 
   .admissions-subheading {
     font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .admissions-enquire-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin-top: 10px;
+    text-align: center;
   }
 
   .admissions-cards {
-    width: 100%;
-    flex-direction: column;
-    gap: 15px;
     align-items: center;
-    display: flex; 
-    justify-content: center; 
   }
 
   .admissions-card {
     width: 140px;
     padding: 8px;
     font-size: 13px;
-    text-align: center;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .card-number {
@@ -269,65 +203,33 @@
     height: 30px;
   }
 }
-@media screen and (max-width: 450px) {
-  .admissions-section {
-    flex-direction: column;
-    padding: 0px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-  }
 
-  .admissions-content {
+@media screen and (max-width: 450px) {
+  .admissions-main-content {
     flex-direction: column;
     padding: 20px;
-    margin-bottom: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -60px;
-    margin-bottom: 100px;
   }
 
-  .admissions-left {
-    width: 90%;
-    margin-bottom: 20px;
-    text-align: center;
+  .admissions-left-side, .admissions-right-side {
+    width: 100%;
   }
 
   .admissions-heading {
     font-size: 28px;
-    margin-bottom: 10px;
   }
 
   .admissions-subheading {
     font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .admissions-enquire-button {
-    font-size: 14px;
-    padding: 8px 16px;
-    margin-top: 10px;
   }
 
   .admissions-cards {
-    width: 100%;
-    flex-direction: column;
-    gap: 15px;
     align-items: flex-start;
-    display: flex;
-    justify-content: flex-start;
   }
 
   .admissions-card {
     width: 120px;
     padding: 8px;
     font-size: 12px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .card-number {
@@ -337,8 +239,7 @@
   }
 
   .card-1 {
-    margin-top: 30px;
-    margin-left: 0%;
+    margin-left: 0;
   }
 
   .card-2 {
@@ -351,12 +252,14 @@
 
   .card-4 {
     margin-left: 68%;
-    margin-bottom: 100px;
   }
-  .pad{
+
+  .pad {
     margin-bottom: 370px;
   }
 }
+
+
 
 
 
@@ -386,26 +289,24 @@
 
 .admission-student-info-section {
   position: relative;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  width: 400px;
+  margin-top: 0;
   padding: 25px;
   border-radius: 20px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
   color: var(--yellow-1);
   display: flex;
   flex-direction: column;
   gap: 10px;
   overflow: hidden;
   background: #07182E;
+  align-self: self-start;
 }
 
 .admission-student-info-section::before {
   content: '';
   position: absolute;
-  width: 150%;
-  height: 150%;
+  width: 90%;
+  height: 90%;
   background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
   animation: rotBGimg 3s linear infinite;
   transition: all 0.2s linear;
@@ -466,18 +367,6 @@
   position: relative;
 }
 
-
-.admission-student-info-section::before {
-  content: '';
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
-  animation: rotBGimg 3s linear infinite;
-  transition: all 0.2s linear;
-  z-index: 0;
-}
-
 .admission-student-info-field select.admission-input {
   appearance: none;
   -webkit-appearance: none;
@@ -498,7 +387,6 @@
   background-color: #280c11;
   color: #fff;
 }
-
 
 .admission-student-info-field {
   display: flex;
@@ -595,6 +483,7 @@
 
 
 
+
 .ganesh-popup-card {
   position: fixed;
   top: 50%;
@@ -634,5 +523,484 @@
   100% {
     opacity: 1;
     transform: translate(-50%, -50%);
+  }
+}
+*/
+
+
+
+
+.preethi-ad {
+  background-color: #ebe1ff;
+  overflow-x: hidden;
+  font-family: 'Outfit', sans-serif;
+}
+
+.preethi-admissions-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #ebe1ff;
+  width: 100%;
+  margin-bottom: 300px;
+  height: auto;
+}
+
+.preethi-admissions-image-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.preethi-admissions-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.preethi-admissions-main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  width: 100%;
+  gap: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.preethi-admissions-left-side {
+  margin-top: 60px;
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  width: 50%;
+}
+
+.preethi-admissions-right-side {
+  margin-top: 60px;
+  width: 50%;
+  flex: 0 0 50%;
+  display: flex;
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 20px;
+  max-width: 1000px;
+  height: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: none;
+  margin-left: 0px;
+}
+
+.preethi-admissions-left {
+  color: white;
+}
+
+.preethi-admissions-heading {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.preethi-admissions-subheading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.preethi-admissions-enquire-button {
+  background-color: #65318e;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.preethi-admissions-enquire-button:hover {
+  background-color: #711e9c;
+}
+
+.preethi-admissions-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.preethi-admissions-card {
+  background-color: #c786f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  width: 170px;
+  position: relative;
+  text-align: center;
+  height: fit-content;
+  color: white;
+}
+
+.preethi-admissions-card p {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.preethi-card-1 {
+  margin-top: 0;
+}
+
+.preethi-card-2 {
+  margin-left: 90px;
+}
+
+.preethi-card-3 {
+  margin-left: 150px;
+}
+
+.preethi-card-4 {
+  margin-left: 210px;
+}
+
+.preethi-card-number {
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.preethi-admission-student-info-section {
+  position: relative;
+  width: 400px;
+  margin-top: 0;
+  padding: 25px;
+  border-radius: 20px;
+  color: var(--yellow-1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  background: #07182E;
+  align-self: self-start;
+}
+
+.preethi-admission-student-info-section::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+  z-index: 0;
+}
+
+.preethi-admission-student-info-section::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  inset: 5px;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.preethi-admission-student-info-title {
+  position: relative;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: var(--yellow-1);
+  z-index: 2;
+}
+
+.preethi-admission-student-info-title::before,
+.preethi-admission-student-info-title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: var(--yellow-1);
+}
+
+.preethi-admission-student-info-title::after {
+  animation: pulse 1s linear infinite;
+}
+
+.preethi-admission-student-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.preethi-admission-student-info-field {
+  display: flex;
+  flex-direction: column;
+  color: var(--yellow-1);
+}
+
+.preethi-admission-student-info-field label {
+  font-size: 1.1rem;
+  color: var(--yellow-1);
+  margin-bottom: 5px;
+}
+
+.preethi-admission-input {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid var(--yellow-1);
+  border-radius: 10px;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  padding-right: 20px;
+}
+
+.preethi-admission-input::placeholder {
+  color: #ccc;
+}
+
+.preethi-admission-input:focus {
+  border-color: #00b7ff;
+  box-shadow: 0 0 10px #00b7ff80;
+}
+
+.preethi-admission-submit-btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: var(--violet-2);
+  font-size: 18px;
+  background-color: var(--yellow-1);
+  cursor: pointer;
+  margin: 20px auto 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.preethi-admission-submit-btn:hover {
+  background-color: var(--yellow-2);
+  transform: translateY(-2px) scale(1.05);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.preethi-ganesh-popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 9999;
+  width: 300px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.preethi-ganesh-close-popup-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a235e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.preethi-ganesh-close-popup-btn:hover {
+  background-color: #8b1bb8;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .preethi-admissions-main-content {
+    flex-direction: column;
+    padding: 25px;
+    align-items: center;
+  }
+
+  .preethi-admissions-left-side {
+    width: 100%;
+    align-items: center;
+  }
+
+  .preethi-admissions-heading {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .preethi-admissions-subheading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .preethi-admissions-cards {
+    align-items: center;
+  }
+
+  .preethi-admissions-card {
+    width: 140px;
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .preethi-card-number {
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .preethi-admission-student-info-section {
+    padding: 20px;
+  }
+
+  .preethi-admission-student-info-title {
+    font-size: 2rem;
+  }
+
+  .preethi-admission-submit-btn {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .preethi-admissions-main-content {
+    flex-direction: column-reverse;
+    padding: 20px;
+    position: static;
+    top: auto;
+    height: auto;
+  }
+
+  .preethi-admissions-left-side,
+  .preethi-admissions-right-side {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .preethi-admissions-right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: 10px 0;
+  }
+
+  .preethi-admission-student-info-section {
+    width: 100%;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .preethi-admissions-heading {
+    font-size: 28px;
+    text-align: center;
+    color: #65318e;
+  }
+
+  .preethi-admissions-subheading {
+    font-size: 18px;
+    text-align: center;
+    color: #65318e;
+  }
+
+  .preethi-admissions-cards {
+    align-items: flex-start;
+  }
+
+  .preethi-admissions-card {
+    width: 120px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .preethi-card-number {
+    font-size: 22px;
+    width: 25px;
+    height: 25px;
+    color: #65318e;
+  }
+
+  .preethi-card-1 {
+    margin-left: 0;
+  }
+
+  .preethi-card-2 {
+    margin-left: 0;
+  }
+
+  .preethi-card-3 {
+    margin-left: 0;
+  }
+
+  .preethi-card-4 {
+    margin-left: 0;
+  }
+
+  .preethi-pad {
+    margin-bottom: 0px;
   }
 }

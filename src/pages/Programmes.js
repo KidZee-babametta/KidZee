@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Programmes.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 function Programmes() {
+    useEffect(() => {
+        const slides = document.querySelectorAll('.ttp-slide');
+        let index = 0;
+        const interval = setInterval(() => {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+            index = (index + 1) % slides.length;
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="programmes-page">
             <Navbar />
@@ -38,7 +51,7 @@ function Programmes() {
                 </button>
             </section>
 
-            <section className="programme-section">
+            <section id="play-group" className="programme-section">
                 <h2 className="programme-heading">Playgroup</h2>
                 <div className="programme-content">
                     <div className="programme-left">
@@ -145,7 +158,7 @@ function Programmes() {
 
 
 
-            <section className="nursery nursery-section">
+            <section  id="nursery" className="nursery nursery-section">
                 <h2 className="nursery-heading nursery">Nursery</h2>
                 <div className="nursery-content nursery">
                     <div className="nursery-left nursery">
@@ -178,6 +191,78 @@ function Programmes() {
                     </div>
                 </div>
             </section>
+
+
+
+
+            <section id="teacher-training" className="ttp-section">
+                <h2 className="ttp-heading">Teachers Training Program</h2>
+                <div className="ttp-content">
+                    <div className="ttp-left">
+                        <div className="ttp-slideshow">
+                            <img src="/Images/lr1.jpg" alt="Slide 1" className="ttp-slide active" />
+                            <img src="/Images/lr2.jpg" alt="Slide 2" className="ttp-slide" />
+                            <img src="/Images/lr3.jpg" alt="Slide 3" className="ttp-slide" />
+                        </div>
+                    </div>
+                    <div className="ttp-right">
+                        <div className="programme-card1">
+                            <div className="programme-card-left1">
+                                <h3>Age Group</h3>
+                                <p>1.5 - 2.5 Years</p>
+                            </div>
+                            <div className="programme-card-right1">
+                                <h3>Duration</h3>
+                                <p>3 Hours/Day</p>
+                            </div>
+                        </div>
+                        <p className="ttp-text">
+                            Zee Learn Preschool Teacher Training Programme is a Zee Learn Ltd initiative. Kidzee (Preschool vertical of Zee Learn Ltd) has set unrivalled standards in the CDE (Child Development & Education) space as a leader in ECCE (Early Childhood Care & Education). Kidzee is one of the leading preschool chains in India.
+                        </p>
+                        <p className="ttp-text">
+                            With the onset of NEP, whihc regulates preschool education in India; it is mandatory that all preschool teachers are trained in Early Child Education to be eligible to teach at the Foundational stage.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="day-care" className="daycare-section">
+                <h2 className="daycare-heading">DayCare</h2>
+                <div className="daycare-marquee-container">
+                    <div className="daycare-marquee-track">
+                        {[...Array(10)].map((_, i) => (
+                            <img
+                                key={i}
+                                src={`/Images/lr${i + 1}.jpg`}
+                                alt={`Slide ${i + 1}`}
+                                className="daycare-marquee-image"
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className="daycare-description">
+                    <p className="daycare-text">
+                        A home away from home for your child! We understand that the early years in the child’s life are important for the overall development. The primary role of parents in these years is to provide their children with an environment that is loving, caring, fun-filled and one which provides happy experiences. As these aspects play a very important role in fostering the developmental areas, like, cognitive development, physical development, socio-emotional development, creative development , and language development. Our objective is to create a home away from home for them to feel safe, secure and happy.
+                    </p>
+                    <p className="daycare-text">
+                        Take a walkthrough of a day at Kidzee Daycare Facility:
+                    </p>
+                    <ul className="daycare-list">
+                        <li>Freshen up</li>
+                        <li>Lunch</li>
+                        <li>Nap time</li>
+                        <li>Academics and academic assitance.(Home work)</li>
+                        <li>Inter-intra personal skills</li>
+                        <li>Indoor activities</li>
+                        <li>Snacks</li>
+                        <li>Outdoor Activities</li>
+                        <li>Edutainment</li>
+                    </ul>
+                </div>
+            </section>
+
 
 
 

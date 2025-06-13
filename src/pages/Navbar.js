@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import PencilLoader from './PencilLoader';
@@ -12,6 +12,7 @@ function Navbar() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const navRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +27,18 @@ function Navbar() {
   useEffect(() => {
     setLoading(false);
   }, [location]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setMenuOpen(false);
+        setAboutDropdownOpen(false);
+        setProgrammesDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const isActive = (path) =>
     (location.pathname === '/' && path === '') ||
@@ -49,82 +62,72 @@ function Navbar() {
   return (
     <>
       {loading && <PencilLoader />}
-      <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`}>
+      <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`} ref={navRef}>
         <div className="navbar-container">
-          <img src="/Images/logo1.jpg" alt="Logo" className="logo" />
-          <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-            <div className="dot-grid">
-              {[...Array(9)].map((_, i) => (
-                <span key={i} className="dot" />
-              ))}
+          <img src="/Images/logo5.png" alt="Logo" className="logo" />
+          <div className="nav-button-section">
+            <div className="wavy-bg">
+              <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+                <li>
+                  <Link to="/" className={isActive('') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/'); }}>
+                    Home
+                  </Link>
+                </li>
+                <li className="dropdown" onMouseEnter={() => setAboutDropdownOpen(true)} onMouseLeave={() => setAboutDropdownOpen(false)}>
+                  <Link to="/about" className={isActive('about') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/about'); }}>
+                    About
+                  </Link>
+                  {aboutDropdownOpen && (
+                    <ul className="dropdown-menu">
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'legacy'); }}>Legacy</li>
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'kidzee-advantage'); }}>Kidzee Advantage</li>
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'vision-mission'); }}>Vision & Mission</li>
+                    </ul>
+                  )}
+                </li>
+                <li className="dropdown" onMouseEnter={() => setProgrammesDropdownOpen(true)} onMouseLeave={() => setProgrammesDropdownOpen(false)}>
+                  <Link to="/programmes" className={isActive('programmes') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes'); }}>
+                    Programmes
+                  </Link>
+                  {programmesDropdownOpen && (
+                    <ul className="dropdown-menu">
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'play-group'); }}>Play Group</li>
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'nursery'); }}>Nursery</li>
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'teacher-training'); }}>Teacher Training</li>
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'day-care'); }}>Day Care</li>
+                    </ul>
+                  )}
+                </li>
+                <li>
+                  <Link to="/PenteMind" className={isActive('PenteMind') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/PenteMind'); }}>
+                    PenteMind
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/gallery" className={isActive('gallery') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/gallery'); }}>
+                    Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/admissions" className={isActive('admissions') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/admissions'); }}>
+                    Admissions
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className={isActive('contact') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/contact'); }}>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+              <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+                <div className="dot-grid">
+                  {[...Array(9)].map((_, i) => (
+                    <span key={i} className="dot" />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-          <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <li>
-              <Link to="/" className={isActive('') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/'); }}>
-                Home
-              </Link>
-            </li>
-            <li
-              className="dropdown"
-              onMouseEnter={() => setAboutDropdownOpen(true)}
-              onMouseLeave={() => setAboutDropdownOpen(false)}
-            >
-              <Link to="/about" className={isActive('about') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/about'); }}>
-                About
-              </Link>
-              {aboutDropdownOpen && (
-                <ul className="dropdown-menu">
-                  <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'legacy'); }}>
-                    Legacy
-                  </li>
-                  <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'kidzee-advantage'); }}>
-                    Kidzee Advantage
-                  </li>
-                  <li onClick={(e) => { e.preventDefault(); handleLinkClick('/about', 'vision-mission'); }}>
-                    Vision & Mission
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li
-              className="dropdown"
-              onMouseEnter={() => setProgrammesDropdownOpen(true)}
-              onMouseLeave={() => setProgrammesDropdownOpen(false)}
-            >
-              <Link to="/programmes" className={isActive('programmes') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes'); }}>
-                Programmes
-              </Link>
-              {programmesDropdownOpen && (
-                <ul className="dropdown-menu">
-                  <li onClick={(e) => e.preventDefault()}>Play Group</li>
-                  <li onClick={(e) => e.preventDefault()}>Nursery</li>
-                  <li onClick={(e) => e.preventDefault()}>Teacher Training</li>
-                  <li onClick={(e) => e.preventDefault()}>Day Care</li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <Link to="/PenteMind" className={isActive('PenteMind') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/PenteMind'); }}>
-                PenteMind
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" className={isActive('gallery') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/gallery'); }}>
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link to="/admissions" className={isActive('admissions') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/admissions'); }}>
-                Admissions
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className={isActive('contact') ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleLinkClick('/contact'); }}>
-                Contact
-              </Link>
-            </li>
-          </ul>
         </div>
       </nav>
     </>
