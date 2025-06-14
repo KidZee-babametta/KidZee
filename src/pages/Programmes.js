@@ -256,7 +256,6 @@ function Programmes() {
                         <li>Academics and academic assitance.(Home work)</li>
                         <li>Inter-intra personal skills</li>
                         <li>Indoor activities</li>
-                        <li>Snacks</li>
                         <li>Outdoor Activities</li>
                         <li>Edutainment</li>
                     </ul>

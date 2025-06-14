@@ -25,6 +25,7 @@ function HomePage() {
     const [centresCount, setCentresCount] = useState(0);
     const handleButtonClick = () => {
         navigate('/admissions');
+        window.scrollTo(0, 0);
 
     };
     const handleKnowMoreClick = () => {

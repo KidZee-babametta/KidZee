@@ -48,7 +48,7 @@ const Admissions = () => {
     if (!validateForm()) return;
     setLoading(true);
     emailjs.sendForm(
-      "service_kc4bgd5",
+      "service_msevjua",
       "template_7drfrbp",
       formRef.current,
       "64a9xwGeWZSSrYToE"
@@ -56,7 +56,7 @@ const Admissions = () => {
       setPopupVisible(true);
       formRef.current.reset();
       setFormData({ studentName: "", gender: "male", age: "", parentEmail: "", parentMobile: "" });
-      setTimeout(() => setPopupVisible(false), 1000);
+      setLoading(false);
     }, () => { setLoading(false); });
   };
 

@@ -3,11 +3,33 @@ import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './Contact.css';
+import emailjs from 'emailjs-com';
 
 function Contact() {
     const [mainIndex, setMainIndex] = useState(0);
     const formRef = useRef();
     const location = useLocation();
+    const [popupVisible, setPopupVisible] = useState(false);
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        emailjs.sendForm(
+            'service_187kqfv',
+            'template_gwohx3c',
+            formRef.current,
+            '64a9xwGeWZSSrYToE'
+        ).then(
+        (result) => {
+            console.log("Email successfully sent!");
+            setPopupVisible(true);
+            formRef.current.reset();
+        },
+        (error) => {
+            console.error("There was an error sending the email:", error);
+        }
+    );
+    };
 
     useEffect(() => {
         if (location.hash === "#ganesh123-contact-form") {
@@ -89,60 +111,60 @@ function Contact() {
 
 
             <section id="features" className="run-infrastructure-section">
-  <h2 className="run-infrastructure-heading">✨ Our State-of-the-Art Infrastructure Includes:</h2>
-  <div className="run-infrastructure-gallery">
-    <img
-      src="/Images/legacy1.jpg"
-      alt="Legacy Feature"
-      className="run-infrastructure-image"
-    />
-    <img
-      src="/Images/legacy2.jpg"
-      alt="Legacy Feature"
-      className="run-infrastructure-image"
-    />
-    <img
-      src="/Images/legacy3.jpg"
-      alt="Legacy Feature"
-      className="run-infrastructure-image"
-    />
-    <img
-      src="/Images/legacy4.jpg"
-      alt="Legacy Feature"
-      className="run-infrastructure-image"
-    />
-    <img
-      src="/Images/legacy5.jpg"
-      alt="Legacy Feature"
-      className="run-infrastructure-image"
-    />
-  </div>
-</section>
+                <h2 className="run-infrastructure-heading">✨ Our State-of-the-Art Infrastructure Includes:</h2>
+                <div className="run-infrastructure-gallery">
+                    <img
+                        src="/Images/legacy1.jpg"
+                        alt="Legacy Feature"
+                        className="run-infrastructure-image"
+                    />
+                    <img
+                        src="/Images/legacy2.jpg"
+                        alt="Legacy Feature"
+                        className="run-infrastructure-image"
+                    />
+                    <img
+                        src="/Images/legacy3.jpg"
+                        alt="Legacy Feature"
+                        className="run-infrastructure-image"
+                    />
+                    <img
+                        src="/Images/legacy4.jpg"
+                        alt="Legacy Feature"
+                        className="run-infrastructure-image"
+                    />
+                    <img
+                        src="/Images/legacy5.jpg"
+                        alt="Legacy Feature"
+                        className="run-infrastructure-image"
+                    />
+                </div>
+            </section>
 
-<section id="contact-info" className="preethi-contact-section1">
-  <div className="preethi-contact-cards-wrapper">
-    <div className="preethi-contact-card">
-      <h3 className="preethi-section-heading">📞 Contact for Admissions:</h3>
-      <p className="preethi-contact-info-text">📱 95 123 123 37 / 95 123 123 38 / 95 123 123 39</p>
-    </div>
-    <div className="preethi-contact-card">
-      <h3 className="preethi-section-heading">📩 Email:</h3>
-      <p className="preethi-contact-info-text">kidzeebabamettavzm@gmail.com</p>
-    </div>
-    <div className="preethi-contact-card">
-      <h3 className="preethi-section-heading">📲 Social Media</h3>
-      <div className="preethi-social-media-icons">
-        <i className="fab fa-instagram"></i>
-        <i className="fab fa-facebook-f"></i>
-        <i className="fab fa-youtube"></i>
-      </div>
-    </div>
-    <div className="preethi-contact-card">
-      <h3 className="preethi-section-heading">📍 Visit Us</h3>
-      <p className="preethi-contact-info-text">Backside of Devi Park, MIG-364, Babametta, Vizianagaram</p>
-    </div>
-  </div>
-</section>
+            <section id="contact-info" className="preethi-contact-section1">
+                <div className="preethi-contact-cards-wrapper">
+                    <div className="preethi-contact-card">
+                        <h3 className="preethi-section-heading">📞 Contact for Admissions:</h3>
+                        <p className="preethi-contact-info-text">📱 95 123 123 37 / 95 123 123 38 / 95 123 123 39</p>
+                    </div>
+                    <div className="preethi-contact-card">
+                        <h3 className="preethi-section-heading">📩 Email:</h3>
+                        <p className="preethi-contact-info-text">kidzeebabamettavzm@gmail.com</p>
+                    </div>
+                    <div className="preethi-contact-card">
+                        <h3 className="preethi-section-heading">📲 Social Media</h3>
+                        <div className="preethi-social-media-icons">
+                            <i className="fab fa-instagram"></i>
+                            <i className="fab fa-facebook-f"></i>
+                            <i className="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                    <div className="preethi-contact-card">
+                        <h3 className="preethi-section-heading">📍 Visit Us</h3>
+                        <p className="preethi-contact-info-text">Backside of Devi Park, MIG-364, Babametta, Vizianagaram</p>
+                    </div>
+                </div>
+            </section>
 
 
 
@@ -150,7 +172,7 @@ function Contact() {
 
 
             <section id="ganesh123-contact-form" className="ganesh123-contact-section">
-                <form ref={formRef} className="ganesh123-contact-form">
+                <form ref={formRef} onSubmit={handleSubmit} className="ganesh123-contact-form">
                     <span className="ganesh123-heading">Contact Us</span>
 
                     <div className="ganesh123-form-group">
@@ -176,6 +198,17 @@ function Contact() {
                     <button type="submit" className="ganesh123-contact-submit-button">Submit</button>
                 </form>
             </section>
+
+            {popupVisible && (
+                <div className="popup-card">
+                    <div className="popup-content">
+                        <h3>🎉 Form Submitted Successfully!</h3>
+                        <p>Thank you for contacting us. We'll get back to you soon.</p>
+                        <button onClick={() => setPopupVisible(false)} className="popup-close-btn">Close</button>
+                    </div>
+                </div>
+            )}
+
 
 
             <Footer />
