@@ -33,7 +33,7 @@ const Pentemind = () => {
 
         <section className="monkey-section">
           <img
-            src="/Images/allMonkey.png"
+            src="/Images/allMonkey2.jpg"
             alt="All Monkeys"
             className="monkey-full-image"
           />
@@ -42,7 +42,7 @@ const Pentemind = () => {
        <section className="monkey-cards-section">
   <div className="monkey-row">
     <div className="monkey-image">
-      <img src="/Images/monkey1.png" alt="Monkey 1" />
+      <img src="/Images/monkey11.jpg" alt="Monkey 1" />
     </div>
     <div className="monkey-text-card">
       Goes deep into a topic with focus and single-minded attention.
@@ -51,7 +51,7 @@ const Pentemind = () => {
 
   <div className="monkey-row reverse">
     <div className="monkey-image">
-      <img src="/Images/monkey2.png" alt="Monkey 2" />
+      <img src="/Images/monkey12.jpg" alt="Monkey 2" />
     </div>
     <div className="monkey-text-card">
       Selects crucial information from the copious amounts available and arrays that information in ways that make sense to self and others.
@@ -60,7 +60,7 @@ const Pentemind = () => {
 
   <div className="monkey-row">
     <div className="monkey-image">
-      <img src="/Images/monkey3.png" alt="Monkey 3" />
+      <img src="/Images/monkey13.jpg" alt="Monkey 3" />
     </div>
     <div className="monkey-text-card">
       Goes beyond existing knowledge to pose new questions and offer new solutions.
@@ -69,7 +69,7 @@ const Pentemind = () => {
 
   <div className="monkey-row reverse">
     <div className="monkey-image">
-      <img src="/Images/monkey4.png" alt="Monkey 4" />
+      <img src="/Images/monkey14.jpg" alt="Monkey 4" />
     </div>
     <div className="monkey-text-card">
       Responds sympathetically and constructively to differences among individuals.
@@ -78,7 +78,7 @@ const Pentemind = () => {
 
   <div className="monkey-row">
     <div className="monkey-image">
-      <img src="/Images/monkey5.png" alt="Monkey 5" />
+      <img src="/Images/monkey15.jpg" alt="Monkey 5" />
     </div>
     <div className="monkey-text-card">
       Lives in harmony with the natural world.

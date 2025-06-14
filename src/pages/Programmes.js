@@ -17,6 +17,19 @@ function Programmes() {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash === '#daycare') {
+            const target = document.getElementById('day-care');
+            if (target) {
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            }
+        }
+    }, []);
+
+
     return (
         <div className="programmes-page">
             <Navbar />
@@ -158,7 +171,7 @@ function Programmes() {
 
 
 
-            <section  id="nursery" className="nursery nursery-section">
+            <section id="nursery" className="nursery nursery-section">
                 <h2 className="nursery-heading nursery">Nursery</h2>
                 <div className="nursery-content nursery">
                     <div className="nursery-left nursery">
@@ -166,7 +179,7 @@ function Programmes() {
                         <div className="programme-card1">
                             <div className="programme-card-left1">
                                 <h3>Age Group</h3>
-                                <p>1.5 - 2.5 Years</p>
+                                <p>2.6 - 3.5 Years</p>
                             </div>
                             <div className="programme-card-right1">
                                 <h3>Duration</h3>
@@ -195,6 +208,49 @@ function Programmes() {
 
 
 
+
+
+            <section id="kinder-garden" className="kinder-garden-section">
+                <h2 className="kinder-garden-heading">Kinder Garden</h2>
+                <div className="kinder-garden-content">
+                    <div className="kinder-garden-left">
+                        <img
+                            src="/Images/threeChild.png"
+                            alt="Kinder Garden Image"
+                            className="kinder-garden-image"
+                        />
+                    </div>
+                    <div className="kinder-garden-right">
+                        <div className="programme-card1">
+                            <div className="programme-card-left1">
+                                <h3>Age Group</h3>
+                                <p>4 - 6 Years</p>
+                            </div>
+                            <div className="programme-card-right1">
+                                <h3>Duration</h3>
+                                <p>3 Hours/Day</p>
+                            </div>
+                        </div>
+                        <p className="kinder-garden-text">
+                            As per RTE - Right to Education and NEP - National Education Policy from state to state.
+                        </p>
+                        <p className="kinder-garden-text">
+                            This is in progression to the Kidzee Nursery Curriculum. At Kidzee, the Kindergarten (KG) curriculum ensures a smooth transition to formal schooling.
+                        </p>
+                        <p className="kinder-garden-text">
+                            Age-appropriate activities in various areas like language, numeracy, concept, music, and art are conducted in a planned manner throughout the program.
+                        </p>
+                        <p className="kinder-garden-text">
+                            Proprietary programs for Phonics and English Readiness make us one of the best preschools in India.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
             <section id="teacher-training" className="ttp-section">
                 <h2 className="ttp-heading">Teachers Training Program</h2>
                 <div className="ttp-content">
@@ -206,7 +262,7 @@ function Programmes() {
                         </div>
                     </div>
                     <div className="ttp-right">
-                        <div className="programme-card1">
+                        {/*<div className="programme-card1">
                             <div className="programme-card-left1">
                                 <h3>Age Group</h3>
                                 <p>1.5 - 2.5 Years</p>
@@ -215,7 +271,7 @@ function Programmes() {
                                 <h3>Duration</h3>
                                 <p>3 Hours/Day</p>
                             </div>
-                        </div>
+                        </div> */}
                         <p className="ttp-text">
                             Zee Learn Preschool Teacher Training Programme is a Zee Learn Ltd initiative. Kidzee (Preschool vertical of Zee Learn Ltd) has set unrivalled standards in the CDE (Child Development & Education) space as a leader in ECCE (Early Childhood Care & Education). Kidzee is one of the leading preschool chains in India.
                         </p>

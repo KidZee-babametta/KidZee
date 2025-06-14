@@ -82,7 +82,7 @@ function Contact() {
                     />
                     <div className="contact-banner-content">
                         <h1 className="contact-heading">Kidzee Preschool</h1>
-                        <h2 className="contact-subheading">Admissions Open for 2025-26</h2>
+                        <h2 className="contact-subheading">Contact Us</h2>
                         {/*<button className="contact-enquire-button">Enquire Now</button> */}
                     </div>
                 </div>
@@ -173,7 +173,7 @@ function Contact() {
 
             <section id="ganesh123-contact-form" className="ganesh123-contact-section">
                 <form ref={formRef} onSubmit={handleSubmit} className="ganesh123-contact-form">
-                    <span className="ganesh123-heading">Contact Us</span>
+                    <span className="ganesh123-heading">Book an Appointment/Team</span>
 
                     <div className="ganesh123-form-group">
                         <input className="ganesh123-form-input" required type="text" id="name" name="name" />

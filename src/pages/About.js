@@ -16,34 +16,31 @@ function About() {
         <div className="about">
             <Navbar />
             <section className="about-section">
-                <div className="about-left">
-                    <h1 className="about-heading">About Us</h1>
-                    <div className="about-subheading">
-                        <span className="subheading-item">Legacy</span>
-                        <span className="subheading-divider"></span>
-                        <span className="subheading-item">Kidzee Advantage</span>
-                        <span className="subheading-divider"></span>
-                        <span className="subheading-item">Vision & Mission</span>
-                    </div>
-                </div>
+  <div className="about-left">
+    <h1 className="about-heading">About Us</h1>
+    <div className="about-subheading">
+      <span className="subheading-item">Legacy</span>
+      <span className="subheading-divider"></span>
+      <span className="subheading-item">Kidzee Advantage</span>
+      <span className="subheading-divider"></span>
+      <span className="subheading-item">Vision & Mission</span>
+    </div>
+  </div>
 
-                <div className="about-right">
-                    <img
-                        src="/Images/threeChild.png"
-                        alt="Three Children"
-                        className="about-image"
-                    />
-                </div>
+  <div className="about-right">
+    <img
+      src="/Images/threeChild.png"
+      alt="Three Children"
+      className="about-image"
+    />
+  </div>
 
-                <div className="about-bubbles">
-                    <span className="bubble bubble-yellow large"></span>
-                    <span className="bubble bubble-violet medium"></span>
-                    <span className="bubble bubble-purple small"></span>
-                    <span className="bubble bubble-yellow tiny top-right"></span>
-                    <span className="bubble bubble-violet tiny bottom-left"></span>
-                    <span className="bubble bubble-purple tiny bottom-right"></span>
-                </div>
-            </section>
+  <img src="/Images/baloon.png" className="decor-image" style={{ top: '10%', left: '5%', width: '60px' }} alt="baloon" />
+  <img src="/Images/mouse_img.png" className="decor-image" style={{ bottom: '15%', right: '5%', width: '50px', position: 'absolute' }} alt="mouse" />
+  <img src="/Images/fruit_img.png" className="decor-image" style={{ top: '45%', left: '15%', width: '55px', position: 'absolute' }} alt="fruit" />
+  <img src="/Images/bird.png" className="decor-image" style={{ bottom: '10%', right: '20%', width: '50px', position: 'absolute' }} alt="bird" />
+</section>
+
 
             <section className="section-buttons">
                 <button

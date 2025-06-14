@@ -69,6 +69,19 @@ const Gallery = () => {
     }, [events.length]);
 
     useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === '#infra') {
+        const target = document.getElementById('infra-gallery');
+        if (target) {
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }, 300); 
+        }
+    }
+}, []);
+
+
+    useEffect(() => {
         const timeout = setTimeout(() => {
             setRevealClass("reveal");
         }, 1000);
@@ -80,19 +93,27 @@ const Gallery = () => {
             <Navbar />
 
             <section className="contact-banner-section">
-                <div className="contact-banner-container">
-                    <img
-                        src="/Images/admission_banner.png"
-                        alt="Admission Banner"
-                        className="contact-banner-image"
-                    />
-                    <div className="contact-banner-content">
-                        <h1 className="contact-heading">Kidzee Preschool</h1>
-                        <h2 className="contact-subheading">Admissions Open for 2025-26</h2>
-                        <button className="contact-enquire-button" onClick={handleKnowMoreClick}>Enquire Now</button>
-                    </div>
-                </div>
-            </section>
+  <div className="contact-banner-container">
+    <img
+      src="/Images/admission_banner.png"
+      alt="Admission Banner"
+      className="contact-banner-image"
+    />
+    <div className="contact-banner-content">
+      <h1 className="contact-heading">Kidzee Preschool</h1>
+      <h2 className="contact-subheading">Gallery</h2>
+      {/* <button className="contact-enquire-button" onClick={handleKnowMoreClick}>Enquire Now</button> */}
+    </div>
+  </div>
+
+  {/* Decorative images */}
+  <img src="/Images/baloon.png" className="decor-image" style={{ top: '10%', left: '5%', width: '60px' }} alt="baloon" />
+  <img src="/Images/mouse_img.png" className="decor-image" style={{ bottom: '10%', right: '5%', width: '50px', position: 'absolute' }} alt="mouse" />
+  <img src="/Images/scale.png" className="decor-image" style={{ top: '20%', left: '70%', width: '60px', position: 'absolute' }} alt="scale" />
+  <img src="/Images/bird.png" className="decor-image" style={{ top: '40%', left: '15%', width: '50px', position: 'absolute' }} alt="bird" />
+  <img src="/Images/fruit_img.png" className="decor-image" style={{ bottom: '15%', right: '20%', width: '60px', position: 'absolute' }} alt="fruit" />
+</section>
+
 
             <section id="fun-play-section" className="fun-play-section">
                 <div className="fun-play-left-rotation">
@@ -175,19 +196,8 @@ const Gallery = () => {
                         </div>
                         <p className="shape-info">Innovative Learning</p>
                     </div>
-                    {/*<div className="shape-wrapper">
-      <div className="shape-item hexagon">
-        <img src="/Images/shape4.jpg" alt="Engaging Activities" className="shape-image hexagon" />
-      </div>
-      <p className="shape-info">Engaging Activities</p>
-    </div>
-    <div className="shape-wrapper">
-      <div className="shape-item pentagon">
-        <img src="/Images/shape5.jpg" alt="Personalized Attention" className="shape-image pentagon" />
-      </div>
-      <p className="shape-info">Personalized Attention</p>
-    </div> */}
                 </div>
+                
             </section>
 
             <section className="moving-gallery-section">
@@ -218,7 +228,7 @@ const Gallery = () => {
 
 
 
-            <section className="infra-gallery-section">
+            <section id="infra-gallery" className="infra-gallery-section">
                 <h2 className="infra-gallery-heading">Our Vibrant Preschool Infrastructure</h2>
                 <div className="infra-container">
                     <div className="infra-row">

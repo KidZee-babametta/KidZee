@@ -1011,3 +1011,92 @@
     font-size: 13px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kinder-garden-section {
+  background-color: var(--yellow-1);
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.kinder-garden-heading {
+  font-size: 2.5rem;
+  color: var(--violet-1);
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.kinder-garden-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.kinder-garden-left {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.kinder-garden-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.kinder-garden-right {
+  flex: 1;
+  min-width: 280px;
+  color: var(--blackish);
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.kinder-garden-text {
+  line-height: 1.6;
+  font-weight: 500;
+  padding: 0 1rem;
+}
+
+@media (max-width: 450px) {
+  .kinder-garden-heading {
+    font-size: 1.8rem;
+  }
+
+  .kinder-garden-content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .kinder-garden-right {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .kinder-garden-text {
+    padding: 0;
+  }
+}

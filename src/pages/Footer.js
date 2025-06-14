@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPhoneAlt, FaEnvelope, FaClock, FaInstagram, FaYoutube, FaFacebookF, FaChevronDown} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaClock, FaInstagram, FaYoutube, FaFacebookF, FaChevronDown } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -12,20 +12,19 @@ const Footer = () => {
   return (
     <footer className="ganesh1-homepage-footer">
       <div className="ganesh1-footer-section">
-        <div className="ganesh1-footer-left">
-          <img
-            src="/Images/logo5.png"
-            alt="Footer Image"
-            className="ganesh1-footer-image"
-          />
-          {/*<p className="ganesh1-footer-address">
-            BABA METTA , Vizianagaram
-          </p> */}
-          <div className="ganesh1-extra">
+        <div className="ganesh1-footer-left ganesh1-footer-left-final">
+          <div className="ganesh1-footer-left-top-final">
+            <img
+              src="/Images/logo8.png"
+              alt="Footer Image"
+              className="ganesh1-footer-image-final"
+            />
+          </div>
+          <div className="ganesh1-footer-left-bottom-final">
             <img
               src="/Images/brand-mark.png"
               alt="Footer Image"
-              className="ganesh1-footer-image1"
+              className="ganesh1-footer-image1-final"
             />
           </div>
         </div>
@@ -128,24 +127,24 @@ const Footer = () => {
               <a href="https://www.facebook.com/kidzeepreschoolbabametta/" target="_blank" rel="noopener noreferrer" >
                 <FaFacebookF />
               </a>
-              <div className="ganesh1-extra">
-                <img src="/Images/zee-learn.png" alt="Footer Image" className="ganesh1-footer-image2" />
-              </div>
+            </div>
+            <div className="ganesh1-extra-final">
+              <img
+                src="/Images/qr.jpg"
+                alt="QR Code"
+                className="ganesh1-footer-image2-final"
+              />
+              <img
+                src="/Images/zee-learn.png"
+                alt="Zee Learn"
+                className="ganesh1-footer-image3-final"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="ganesh1-footer-bubbles">
-        <img
-          src="/Images/baloon.png"
-          className="ganesh1-footer-bubble ganesh1-footer-bubble-one"
-        />
-        <img
-          src="/Images/more_fish.png"
-          className="ganesh1-footer-bubble ganesh1-footer-bubble-two"
-        />
-      </div>
+      
     </footer>
   );
 };
