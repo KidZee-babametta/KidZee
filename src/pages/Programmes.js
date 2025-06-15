@@ -211,24 +211,50 @@ function Programmes() {
 
 
             <section id="kinder-garden" className="kinder-garden-section">
-                <h2 className="kinder-garden-heading">Kinder Garden</h2>
+                <h2 className="kinder-garden-heading">Junior / Senior Kinder Garden</h2>
                 <div className="kinder-garden-content">
                     <div className="kinder-garden-left">
-                        <img
-                            src="/Images/threeChild.png"
-                            alt="Kinder Garden Image"
-                            className="kinder-garden-image"
-                        />
+                        <img src="/Images/threeChild.png" alt="Kinder Garden Image" className="kinder-garden-image" />
+                        <img src="/Images/lr2.jpg" alt="Kinder Garden Image" className="kinder-garden-image" />
+                        <img src="/Images/shape5.jpg" alt="Kinder Garden Image" className="kinder-garden-image" />
                     </div>
                     <div className="kinder-garden-right">
+                        <h2 className="kinder-garden-heading">Junior Kinder Garden</h2>
                         <div className="programme-card1">
+                            
                             <div className="programme-card-left1">
                                 <h3>Age Group</h3>
-                                <p>4 - 6 Years</p>
+                                <p>4 - 5 Years</p>
                             </div>
                             <div className="programme-card-right1">
                                 <h3>Duration</h3>
-                                <p>3 Hours/Day</p>
+                                <p>4 Hours/Day</p>
+                            </div>
+                        </div>
+                        <p className="kinder-garden-text">
+                            As per RTE - Right to Education and NEP - National Education Policy from state to state.
+                        </p>
+                        <p className="kinder-garden-text">
+                            This is in progression to the Kidzee Nursery Curriculum. At Kidzee, the Kindergarten (KG) curriculum ensures a smooth transition to formal schooling.
+                        </p>
+                        <p className="kinder-garden-text">
+                            Age-appropriate activities in various areas like language, numeracy, concept, music, and art are conducted in a planned manner throughout the program.
+                        </p>
+                        <p className="kinder-garden-text">
+                            Proprietary programs for Phonics and English Readiness make us one of the best preschools in India.
+                        </p><br /><br />
+
+
+                        <h2 className="kinder-garden-heading">Senior Kinder Garden</h2>
+                        <div className="programme-card1">
+                            
+                            <div className="programme-card-left1">
+                                <h3>Age Group</h3>
+                                <p>5 - 6 Years</p>
+                            </div>
+                            <div className="programme-card-right1">
+                                <h3>Duration</h3>
+                                <p>4 Hours/Day</p>
                             </div>
                         </div>
                         <p className="kinder-garden-text">
@@ -243,6 +269,9 @@ function Programmes() {
                         <p className="kinder-garden-text">
                             Proprietary programs for Phonics and English Readiness make us one of the best preschools in India.
                         </p>
+
+
+
                     </div>
                 </div>
             </section>
@@ -256,9 +285,9 @@ function Programmes() {
                 <div className="ttp-content">
                     <div className="ttp-left">
                         <div className="ttp-slideshow">
-                            <img src="/Images/lr1.jpg" alt="Slide 1" className="ttp-slide active" />
-                            <img src="/Images/lr2.jpg" alt="Slide 2" className="ttp-slide" />
-                            <img src="/Images/lr3.jpg" alt="Slide 3" className="ttp-slide" />
+                            <img src="/Images/lr2.jpg" alt="Slide 1" className="ttp-slide active" />
+                            <img src="/Images/lr4.jpg" alt="Slide 2" className="ttp-slide" />
+                            <img src="/Images/lr7.jpg" alt="Slide 3" className="ttp-slide" />
                         </div>
                     </div>
                     <div className="ttp-right">
