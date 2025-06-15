@@ -1,9 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaClock, FaInstagram, FaYoutube, FaFacebookF, FaChevronDown } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);
+
+  const navigate = useNavigate();
+const [loading, setLoading] = useState(false);
+
+const handleLinkClick = (path, scrollToId = null) => {
+  setLoading(true);
+  setTimeout(() => {
+    navigate(path);
+    window.scrollTo(0, 0);
+    setLoading(false);
+    if (scrollToId) {
+      setTimeout(() => {
+        const section = document.getElementById(scrollToId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, 200);
+};
+
 
   const handleAccordion = (section) => {
     setOpenSection(openSection === section ? null : section);
@@ -15,7 +35,7 @@ const Footer = () => {
         <div className="ganesh1-footer-left ganesh1-footer-left-final">
           <div className="ganesh1-footer-left-top-final">
             <img
-              src="/Images/logo8.png"
+              src="/Images/logo11.jpg"
               alt="Footer Image"
               className="ganesh1-footer-image-final"
             />
@@ -48,11 +68,11 @@ const Footer = () => {
             </span>
           </div>
           <ul className="ganesh1-sub-list">
-            <li>Nursery</li>
-            <li>Kindergarten</li>
-            <li>Teacher Training Programme</li>
-            <li>Privacy Policy</li>
-            <li>Elementary School</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'nursery'); }}>Nursery</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'kinder-garden'); }}>Kindergarten</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'teacher-training'); }}>Teacher Training Programme</li>
+            <li onClick={() => handleLinkClick('/contact')}>Privacy Policy</li>
+            <li onClick={() => handleLinkClick('/programmes')}>Elementary School</li>
           </ul>
         </div>
 
@@ -75,11 +95,11 @@ const Footer = () => {
             </span>
           </div>
           <ul className="ganesh1-sub-list">
-            <li>Péntemind</li>
-            <li>Blog</li>
-            <li>In News</li>
-            <li>Locate Us</li>
-            <li>Our Presence</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/pentemind'); }}>Péntemind</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/gallery'); }}>Blog</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/contact'); }}>In News</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/contact'); }}>Locate Us</li>
+            <li onClick={(e) => { e.preventDefault(); handleLinkClick('/contact'); }}>Our Presence</li>
           </ul>
         </div>
 

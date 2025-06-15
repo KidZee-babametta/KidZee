@@ -12,8 +12,8 @@ const Gallery = () => {
         navigate('/contact'); 
     };
     const [items] = useState([
-        "unit1.jpg", "unit2.jpg", "unit3.jpg", "unit4.jpg",
-        "unit5.jpg", "unit6.jpg", "unit7.jpg", "unit8.jpg"
+        "a1.jpg", "a2.jpg", "a3.jpg", "a4.jpg",
+        "a5.jpg", "a6.jpg", "a7.jpg", "a8.jpg"
     ]);
     const [revealClass, setRevealClass] = useState("");
 
@@ -118,6 +118,8 @@ const Gallery = () => {
             <section id="fun-play-section" className="fun-play-section">
                 <div className="fun-play-left-rotation">
                     <div className="wrapper">
+                         <img src="/Images/btrfly_img.png" className="decor-image14" style={{ bottom: '10%', right: '10%', width: '60px',  }} alt="butterfly" />
+                <img src="/Images/more_fish.png" className="decor-image15" style={{ top: '60%', left: '45%', width: '50px',  }} alt="fish" />
                         <div className="inner" style={{ '--quantity': items.length }}>
                             {items.map((img, index) => (
                                 <div
@@ -125,7 +127,7 @@ const Gallery = () => {
                                     key={index}
                                     style={{ '--index': index, '--color-card': '0, 123, 255' }}
                                 >
-                                    <img className="img1" src={`/Images/${img}`} alt={`unit${index}`} />
+                                    <img className="img1" src={`/Images/${img}`} alt={`unit1${index}`} />
                                 </div>
                             ))}
                         </div>
@@ -152,6 +154,8 @@ const Gallery = () => {
             <section id="event-gallery" className="event-gallery-section">
                 {/*<h2 className="section-heading">Events & Celebrations at Kidzee</h2>  */}
                 <div className="event-gallery-container">
+                     <img src="/Images/btrfly_img.png" className="decor-image14" style={{ bottom: '10%', right: '10%', width: '60px',  }} alt="butterfly" />
+                <img src="/Images/more_fish.png" className="decor-image15" style={{ top: '60%', left: '45%', width: '50px',  }} alt="fish" />
                     {events.map((event, idx) => (
                         <div
                             key={idx}
@@ -177,6 +181,7 @@ const Gallery = () => {
 
             <section id="shapes-gallery" className="shapes-gallery-section">
                 <h2 className="shapes-heading">Kid's Interactive Sessions</h2>
+                
                 <div className="shapes-container">
                     <div className="shape-wrapper">
                         <div className="shape-item circle">

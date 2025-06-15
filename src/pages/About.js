@@ -72,10 +72,14 @@ function About() {
             <section className="homepage-about-us-section">
                 <div className="homepage-about-us-left">
                     <h2 className="homepage-about-us-heading">About Us</h2>
+                    
                     <img src="/Images/bottom_img.png" alt="Decoration" className="homepage-about-us-divider" />
+                    <img src="/Images/pen.png" className="decor-image11" style={{ top: '15%', right: '5%', width: '70px',  }} alt="peng" />
+                
                     <p className="homepage-about-us-description">
                         Kidzee Preschool
                         Kidzee Preschool is a leading chain of preschools located in India and Nepal backed by Zee Learn Ltd. With more than two decades of experience in the preschool industry, Kidzee has nurtured more than 1.5 million children throughout India. Being one of the largest preschools in India. Kidzee has 2000+ centres in 750+ cities in India and Nepal.
+                    
                     </p>
                     <p className="homepage-about-us-description">
                         Kidzee Advantage
@@ -84,6 +88,8 @@ function About() {
                     <p className="homepage-about-us-description">
                         Our Business Partners don't just take the name, they also take our pedagogy- PéNTEMiND, guidelines to teach, prescribes books/plays to be followed and so on to the ground.
                     </p>
+                    <img src="/Images/fruit_img.png" className="decor-image" style={{ top: '10%', left: '5%', width: '60px' }} alt="fruit" />
+                
                 </div>
 
                 <div className="homepage-about-us-right">
@@ -106,6 +112,8 @@ function About() {
                         Kidzee Preschool
                         We believe that there is ‘unique potential’ in every child; and Kidzee nurtures it. Touted to be one of the best preschools in India, we nurture and shape minds with the help of our best-in-class age-appropriate progressive curriculum. We are changing the face of early childhood education with consistent upgradation and innovation to meet the current needs with a proactive future, focused on grooming them to be ‘ever-ready for life’. Our commitment towards quality education also values aspects like self-reliance, peer interaction, and individual growth. Our solid foundation and polished business model make it profitable for all the stakeholders involved.
                     </p>
+                     <img src="/Images/dall_girl.png" className="decor-image13" style={{ top: '40%', left: '80%', width: '70px',  }} alt="doll" />
+               
                 </div>
 
                 <div className="legacy-right">
@@ -168,6 +176,8 @@ function About() {
                             <li>An innovative pedagogy aligned to NEP 2020 designed to help nurture collaborative team players and breakthrough leaders.</li>
                         </ul>
                     </div>
+                     <img src="/Images/btrfly_img.png" className="decor-image14" style={{ bottom: '10%', right: '10%', width: '60px',  }} alt="butterfly" />
+                <img src="/Images/more_fish.png" className="decor-image15" style={{ top: '60%', left: '45%', width: '50px',  }} alt="fish" />
                 </div>
 
                 <div className="kidzee-advantage-right">

@@ -197,7 +197,7 @@ function Programmes() {
                     </div>
                     <div className="nursery-right nursery">
                         <div className="nursery-images nursery">
-                            <img src="/Images/unit3.jpg" alt="Unit 3" className="nursery-img center-img nursery" />
+                            <img src="/Images/unit2.jpg" alt="Unit 3" className="nursery-img center-img nursery" />
                             <img src="/Images/unit1.jpg" alt="Unit 1" className="nursery-img left-img nursery" />
                             <img src="/Images/shape4.jpg" alt="Shape 4" className="nursery-img right-img nursery" />
                         </div>
@@ -215,7 +215,7 @@ function Programmes() {
                 <div className="kinder-garden-content">
                     <div className="kinder-garden-left">
                         <img src="/Images/threeChild.png" alt="Kinder Garden Image" className="kinder-garden-image" />
-                        <img src="/Images/lr2.jpg" alt="Kinder Garden Image" className="kinder-garden-image" />
+                        <img src="/Images/teacher1.jpg" alt="Kinder Garden Image" className="kinder-garden-image" />
                         <img src="/Images/shape5.jpg" alt="Kinder Garden Image" className="kinder-garden-image" />
                     </div>
                     <div className="kinder-garden-right">

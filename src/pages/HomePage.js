@@ -37,8 +37,8 @@ function HomePage() {
 
     const [index, setIndex] = useState(0);
     const [items] = useState([
-        "unit1.jpg", "unit2.jpg", "unit3.jpg", "unit4.jpg",
-        "unit5.jpg", "unit6.jpg", "unit7.jpg", "unit8.jpg"
+        "a1.jpg", "a2.jpg", "a3.jpg", "a4.jpg",
+        "a5.jpg", "a6.jpg", "a7.jpg", "a8.jpg"
     ]);
     const [revealClass, setRevealClass] = useState("");
 
@@ -277,7 +277,7 @@ function HomePage() {
                                     key={index}
                                     style={{ '--index': index, '--color-card': '0, 123, 255' }}
                                 >
-                                    <img className="img1" src={`/Images/${img}`} alt={`unit${index}`} />
+                                    <img className="img1" src={`/Images/${img}`} alt={`unit1${index}`} />
                                 </div>
                             ))}
                         </div>
@@ -579,6 +579,7 @@ function HomePage() {
             <section className="homepage-about-us-section">
                 <div className="homepage-about-us-left">
                     <h2 className="homepage-about-us-heading">About Us</h2>
+                    
                     <img src="/Images/bottom_img.png" alt="Decoration" className="homepage-about-us-divider" />
                     <p className="homepage-about-us-description">
                         Kidzee Preschool
@@ -591,12 +592,15 @@ function HomePage() {
                     <p className="homepage-about-us-description">
                         Our Business Partners don't just take the name, they also take our pedagogy- PéNTEMiND, guidelines to teach, prescribes books/plays to be followed and so on to the ground.
                     </p>
+                    <img src="/Images/fruit_img.png" className="decor-image1" style={{ top: '10%', left: '5%', width: '60px' }} alt="fruit" />
+                
                 </div>
 
                 <div className="homepage-about-us-right">
                     <img src="/Images/slide1.jpg" alt="Slide" className="homepage-about-us-image-right" />
                     <img src="/Images/abc.png" alt="Overlay" className="homepage-about-us-overlay-image" />
                 </div>
+                
             </section>
 
 

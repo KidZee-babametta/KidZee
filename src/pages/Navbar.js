@@ -64,7 +64,7 @@ function Navbar() {
       {loading && <PencilLoader />}
       <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`} ref={navRef}>
         <div className="navbar-container">
-          <img src="/Images/logo9.png" alt="Logo" className="logo" />
+          <img src="/Images/logo8.png" alt="Logo" className="logo" />
           <div className="nav-button-section">
             <div className="wavy-bg">
               <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
@@ -93,7 +93,7 @@ function Navbar() {
                     <ul className="dropdown-menu">
                       <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'play-group'); }}>Play Group</li>
                       <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'nursery'); }}>Nursery</li>
-                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'kinder-garden'); }}>Kinder Garden</li>
+                      <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'kinder-garden'); }}>Jr / Sr K.G</li>
                       <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'teacher-training'); }}>Teacher Training</li>
                       <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'day-care'); }}>Day Care</li>
                     </ul>
