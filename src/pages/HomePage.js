@@ -576,7 +576,7 @@ function HomePage() {
             </section>
 
 
-            <section className="homepage-about-us-section">
+            {/*<section className="homepage-about-us-section">
                 <div className="homepage-about-us-left">
                     <h2 className="homepage-about-us-heading">About Us</h2>
                     
@@ -601,45 +601,95 @@ function HomePage() {
                     <img src="/Images/abc.png" alt="Overlay" className="homepage-about-us-overlay-image" />
                 </div>
                 
+            </section> */}
+
+
+            <section className="homepage-about-us-section-ganesh51">
+                <div className="homepage-about-us-left-ganesh51">
+                    <h2 className="homepage-about-us-heading-ganesh51">About Us</h2>
+                    <img src="/Images/bottom_img.png" alt="Decoration" className="homepage-about-us-divider-ganesh51" />
+                    <img src="/Images/pen.png" className="decor-image11-ganesh51" style={{ top: '15%', right: '5%', width: '70px' }} alt="peng" />
+
+                    <div className="about-card-ganesh51">
+                        <div className="about-left-ganesh51">
+                            <p className="about-name-ganesh51">Mrs Tina Dembla</p>
+                            <p className="about-designation-ganesh51">Founder & Secretary<br />Kidzee Babametta</p>
+                            <p className="about-description-ganesh51">
+                                At Kidzee, we believe that every child is born with infinite potential. Our mission is to nurture young minds with love, creativity, and the right learning environment, ensuring they take their first steps toward a bright future with confidence and joy. Welcome to a world where learning meets fun!
+                            </p>
+                        </div>
+                        <div className="about-right-ganesh51">
+                            <img src="/Images/slide2.jpg" alt="Tina" className="about-image-ganesh51" />
+                        </div>
+                    </div>
+
+                    <div className="about-card-ganesh51 reverse-ganesh51">
+                        <div className="about-left-ganesh51">
+                            <img src="/Images/slide3.jpg" alt="Sindhuja" className="about-image-ganesh51" />
+                        </div>
+                        <div className="about-right-ganesh51">
+                            <p className="about-name-ganesh51">Mrs Sindhuja</p>
+                            <p className="about-designation-ganesh51">Founder & Correspondent<br />Kidzee Babametta<br />MSc Biotechnology</p>
+                            <p className="about-description-ganesh51">
+                                As an educator and a parent, I understand how crucial the early years are in shaping a child’s future. At Kidzee, we don’t just teach—we inspire, engage, and empower. Our team is dedicated to creating an environment where children feel loved, valued, and excited to learn every day. Join us in this beautiful journey of growth and discovery!
+                            </p>
+                        </div>
+                    </div>
+
+                    <img src="/Images/fruit_img.png" className="decor-image-ganesh51" style={{ top: '10%', left: '5%', width: '60px' }} alt="fruit" />
+                </div>
             </section>
 
 
 
 
             <section className="homepage-trust-section">
-                <h2 className="homepage-trust-heading">
-                    More Than Just a Preschool – A Trusted Partner in Your Child’s Growth
-                </h2>
-                <div className="homepage-trust-content">
-                    <div className="homepage-trust-left">
-                        <div className="homepage-trust-grid">
-                            <div className="trust-card small-card">
-                                <span className="trust-count">{expertiseCount}+</span>
-                                <p className="trust-label">Years of Expertise</p>
-                            </div>
-                            <div className="trust-card big-card">
-                                <img src="/Images/zee-learn.png" alt="Zee Learn" />
-                            </div>
-                            <div className="trust-card big-card">
-                                <img src="/Images/happy-family.jpg" alt="Happy Family" />
-                            </div>
-                            <div className="trust-card small-card">
-                                <span className="trust-count">{centresCount}+</span>
-                                <p className="trust-label">Centres Across India & Nepal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="homepage-trust-right">
-                        <p className="homepage-trust-text">
-                            At Kidzee, we blend play, learning, and values through a well-researched curriculum designed for every child’s growth. Powered by Zee Learn Ltd., we bring decades of trust, innovation, and care to every classroom.
-                        </p>
-                        <div className="homepage-trust-buttons">
-                            <button className="visit-button" onClick={handleKnowMoreClick}>Book a Free Visit</button>
-                            <button className="team-button" onClick={handleKnowMoreClick}>Meet Our Team</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <h2 className="homepage-trust-heading">
+    More Than Just a Preschool – A Trusted Partner in Your Child’s Growth
+  </h2>
+  <div className="homepage-trust-content">
+    <div className="homepage-trust-left">
+      <div className="homepage-trust-grid">
+        <div className="trust-card small-card">
+          <span className="trust-count">{expertiseCount}+</span>
+          <p className="trust-label">Years of Expertise</p>
+        </div>
+        <div className="trust-card big-card">
+          <img src="/Images/zee-learn.png" alt="Zee Learn" />
+        </div>
+        <div className="trust-card big-card">
+          <img src="/Images/happy-family.jpg" alt="Happy Family" />
+        </div>
+        <div className="trust-card small-card">
+          <span className="trust-count">{centresCount}+</span>
+          <p className="trust-label">Centres Across India & Nepal</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="homepage-trust-right">
+      <p className="homepage-trust-text">
+        At Kidzee, we blend play, learning, and values through a well-researched curriculum designed for every child’s growth. Powered by Zee Learn Ltd., we bring decades of trust, innovation, and care to every classroom.
+      </p>
+      <div className="homepage-trust-buttons">
+        <div className="button-group">
+          <button className="visit-button" onClick={handleKnowMoreClick}>Book a Free Visit</button>
+          <p className="button-subtext">To explore our Campus</p>
+        </div>
+        <div className="button-group">
+          <button className="team-button" onClick={handleKnowMoreClick}>Meet Our Team</button>
+          <p className="button-subtext">For Enquiry</p>
+        </div>
+      </div>
+
+      <div className="campus-walk-card">
+        <p className="campus-line">For A Campus Walk</p>
+        <p className="campus-line">On Saturday & Sunday</p>
+        <p className="campus-line">Timings : 10 AM to 12 PM</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

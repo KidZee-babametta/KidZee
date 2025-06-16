@@ -145,11 +145,11 @@ function Contact() {
                 <div className="preethi-contact-cards-wrapper">
                     <div className="preethi-contact-card">
                         <h3 className="preethi-section-heading">📞 Contact for Admissions:</h3>
-                        <p className="preethi-contact-info-text">📱 95 123 123 37 / 95 123 123 38 / 95 123 123 39</p>
+                        <p className="preethi-contact-info-text">95 123 123 37 / 95 123 123 38 / 95 123 123 39</p>
                     </div>
                     <div className="preethi-contact-card">
                         <h3 className="preethi-section-heading">📩 Email:</h3>
-                        <p className="preethi-contact-info-text">kidzeebabamettavzm@gmail.com</p>
+                        <p className="preethi-contact-info-text">kidzeebabametta@gmail.com</p>
                     </div>
                     <div className="preethi-contact-card">
                         <h3 className="preethi-section-heading">📲 Social Media</h3>

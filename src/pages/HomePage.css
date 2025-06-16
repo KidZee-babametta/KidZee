@@ -855,6 +855,21 @@
     margin: 40px auto;
   }
 
+  .button-subtext {
+  font-size: 13px;
+  text-align: center;
+}
+
+.campus-walk-card {
+  margin-top: 20px;
+  padding: 16px;
+}
+
+.campus-line {
+  font-size: 14px;
+}
+
+
   .homepage-trust-heading {
     font-size: 24px;
     margin-bottom: 24px;
@@ -1062,6 +1077,35 @@
 }
 
 
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-subtext {
+  font-size: 14px;
+  color: #6d2a93;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.campus-walk-card {
+  background: #fff9d6;
+  border: 2px dashed #6d2a93;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(100, 45, 129, 0.1);
+}
+
+.campus-line {
+  font-size: 16px;
+  color: #4d0370;
+  font-weight: bold;
+  margin: 6px 0;
+}
 
 
 

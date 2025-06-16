@@ -202,6 +202,145 @@
 
 
 
+.homepage-about-us-section-ganesh51 {
+  background-color: #ebe1ff;
+  font-family: 'Outfit', sans-serif;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.homepage-about-us-left-ganesh51 {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.homepage-about-us-heading-ganesh51 {
+  font-size: 56px;
+  font-weight: bold;
+  color: #6d2a93;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.homepage-about-us-divider-ganesh51 {
+  display: block;
+  margin: 0 auto 40px;
+  width: 200px;
+}
+
+.decor-image11-ganesh51,
+.decor-image-ganesh51 {
+  position: absolute;
+  z-index: 1;
+}
+
+.about-card-ganesh51 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-card-ganesh51.reverse-ganesh51 {
+  flex-direction: row-reverse;
+}
+
+.about-left-ganesh51,
+.about-right-ganesh51 {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-name-ganesh51 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6d2a93;
+  margin-bottom: 10px;
+}
+
+.about-designation-ganesh51 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #6d2a93;
+  margin-bottom: 20px;
+}
+
+.about-description-ganesh51 {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.about-image-ganesh51 {
+  margin-left: 100px;
+  width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-about-us-heading-ganesh51 {
+    font-size: 36px;
+  }
+
+  .about-card-ganesh51,
+  .about-card-ganesh51.reverse-ganesh51 {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .about-left-ganesh51,
+  .about-right-ganesh51 {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .about-image-ganesh51 {
+    
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Small devices - phones */
+@media screen and (max-width: 450px) {
+  .homepage-about-us-heading-ganesh51 {
+    font-size: 28px;
+  }
+
+  .about-name-ganesh51 {
+    font-size: 20px;
+  }
+
+  .about-designation-ganesh51 {
+    font-size: 16px;
+  }
+
+  .about-description-ganesh51 {
+    font-size: 15px;
+  }
+
+  .about-card-ganesh51 {
+    padding: 20px 10px;
+  }
+
+  .about-image-ganesh51 {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -879,6 +1018,11 @@
   z-index: 1;
   text-align: left;
   margin-left: -30px;
+}
+.homepage-about-us-image-right{
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
 }
 
 .vision-mission-heading {

@@ -16,30 +16,30 @@ function About() {
         <div className="about">
             <Navbar />
             <section className="about-section">
-  <div className="about-left">
-    <h1 className="about-heading">About Us</h1>
-    <div className="about-subheading">
-      <span className="subheading-item">Legacy</span>
-      <span className="subheading-divider"></span>
-      <span className="subheading-item">Kidzee Advantage</span>
-      <span className="subheading-divider"></span>
-      <span className="subheading-item">Vision & Mission</span>
-    </div>
-  </div>
+                <div className="about-left">
+                    <h1 className="about-heading">About Us</h1>
+                    <div className="about-subheading">
+                        <span className="subheading-item">Legacy</span>
+                        <span className="subheading-divider"></span>
+                        <span className="subheading-item">Kidzee Advantage</span>
+                        <span className="subheading-divider"></span>
+                        <span className="subheading-item">Vision & Mission</span>
+                    </div>
+                </div>
 
-  <div className="about-right">
-    <img
-      src="/Images/threeChild.png"
-      alt="Three Children"
-      className="about-image"
-    />
-  </div>
+                <div className="about-right">
+                    <img
+                        src="/Images/threeChild.png"
+                        alt="Three Children"
+                        className="about-image"
+                    />
+                </div>
 
-  <img src="/Images/baloon.png" className="decor-image" style={{ top: '10%', left: '5%', width: '60px' }} alt="baloon" />
-  <img src="/Images/mouse_img.png" className="decor-image" style={{ bottom: '15%', right: '5%', width: '50px', position: 'absolute' }} alt="mouse" />
-  <img src="/Images/fruit_img.png" className="decor-image" style={{ top: '45%', left: '15%', width: '55px', position: 'absolute' }} alt="fruit" />
-  <img src="/Images/bird.png" className="decor-image" style={{ bottom: '10%', right: '20%', width: '50px', position: 'absolute' }} alt="bird" />
-</section>
+                <img src="/Images/baloon.png" className="decor-image" style={{ top: '10%', left: '5%', width: '60px' }} alt="baloon" />
+                <img src="/Images/mouse_img.png" className="decor-image" style={{ bottom: '15%', right: '5%', width: '50px', position: 'absolute' }} alt="mouse" />
+                <img src="/Images/fruit_img.png" className="decor-image" style={{ top: '45%', left: '15%', width: '55px', position: 'absolute' }} alt="fruit" />
+                <img src="/Images/bird.png" className="decor-image" style={{ bottom: '10%', right: '20%', width: '50px', position: 'absolute' }} alt="bird" />
+            </section>
 
 
             <section className="section-buttons">
@@ -69,34 +69,42 @@ function About() {
                 </button>
             </section>
 
-            <section className="homepage-about-us-section">
-                <div className="homepage-about-us-left">
-                    <h2 className="homepage-about-us-heading">About Us</h2>
-                    
-                    <img src="/Images/bottom_img.png" alt="Decoration" className="homepage-about-us-divider" />
-                    <img src="/Images/pen.png" className="decor-image11" style={{ top: '15%', right: '5%', width: '70px',  }} alt="peng" />
-                
-                    <p className="homepage-about-us-description">
-                        Kidzee Preschool
-                        Kidzee Preschool is a leading chain of preschools located in India and Nepal backed by Zee Learn Ltd. With more than two decades of experience in the preschool industry, Kidzee has nurtured more than 1.5 million children throughout India. Being one of the largest preschools in India. Kidzee has 2000+ centres in 750+ cities in India and Nepal.
-                    
-                    </p>
-                    <p className="homepage-about-us-description">
-                        Kidzee Advantage
-                        Kidzee is a leader and a trendsetter in Early Childhood Care and Education (ECCE). Our business partners’ passion and drive are vital for our brand’s success.
-                    </p>
-                    <p className="homepage-about-us-description">
-                        Our Business Partners don't just take the name, they also take our pedagogy- PéNTEMiND, guidelines to teach, prescribes books/plays to be followed and so on to the ground.
-                    </p>
-                    <img src="/Images/fruit_img.png" className="decor-image" style={{ top: '10%', left: '5%', width: '60px' }} alt="fruit" />
-                
-                </div>
+            <section className="homepage-about-us-section-ganesh51">
+                <div className="homepage-about-us-left-ganesh51">
+                    <h2 className="homepage-about-us-heading-ganesh51">About Us</h2>
+                    <img src="/Images/bottom_img.png" alt="Decoration" className="homepage-about-us-divider-ganesh51" />
+                    <img src="/Images/pen.png" className="decor-image11-ganesh51" style={{ top: '15%', right: '5%', width: '70px' }} alt="peng" />
 
-                <div className="homepage-about-us-right">
-                    <img src="/Images/slide1.jpg" alt="Slide" className="homepage-about-us-image-right" />
-                    <img src="/Images/abc.png" alt="Overlay" className="homepage-about-us-overlay-image" />
+                    <div className="about-card-ganesh51">
+                        <div className="about-left-ganesh51">
+                            <p className="about-name-ganesh51">Mrs Tina Dembla</p>
+                            <p className="about-designation-ganesh51">Founder & Secretary<br />Kidzee Babametta</p>
+                            <p className="about-description-ganesh51">
+                                At Kidzee, we believe that every child is born with infinite potential. Our mission is to nurture young minds with love, creativity, and the right learning environment, ensuring they take their first steps toward a bright future with confidence and joy. Welcome to a world where learning meets fun!
+                            </p>
+                        </div>
+                        <div className="about-right-ganesh51">
+                            <img src="/Images/slide2.jpg" alt="Tina" className="about-image-ganesh51" />
+                        </div>
+                    </div>
+
+                    <div className="about-card-ganesh51 reverse-ganesh51">
+                        <div className="about-left-ganesh51">
+                            <img src="/Images/slide3.jpg" alt="Sindhuja" className="about-image-ganesh51" />
+                        </div>
+                        <div className="about-right-ganesh51">
+                            <p className="about-name-ganesh51">Mrs Sindhuja</p>
+                            <p className="about-designation-ganesh51">Founder & Correspondent<br />Kidzee Babametta<br />MSc Biotechnology</p>
+                            <p className="about-description-ganesh51">
+                                As an educator and a parent, I understand how crucial the early years are in shaping a child’s future. At Kidzee, we don’t just teach—we inspire, engage, and empower. Our team is dedicated to creating an environment where children feel loved, valued, and excited to learn every day. Join us in this beautiful journey of growth and discovery!
+                            </p>
+                        </div>
+                    </div>
+
+                    <img src="/Images/fruit_img.png" className="decor-image-ganesh51" style={{ top: '10%', left: '5%', width: '60px' }} alt="fruit" />
                 </div>
             </section>
+
 
 
 
@@ -112,8 +120,8 @@ function About() {
                         Kidzee Preschool
                         We believe that there is ‘unique potential’ in every child; and Kidzee nurtures it. Touted to be one of the best preschools in India, we nurture and shape minds with the help of our best-in-class age-appropriate progressive curriculum. We are changing the face of early childhood education with consistent upgradation and innovation to meet the current needs with a proactive future, focused on grooming them to be ‘ever-ready for life’. Our commitment towards quality education also values aspects like self-reliance, peer interaction, and individual growth. Our solid foundation and polished business model make it profitable for all the stakeholders involved.
                     </p>
-                     <img src="/Images/dall_girl.png" className="decor-image13" style={{ top: '40%', left: '80%', width: '70px',  }} alt="doll" />
-               
+                    <img src="/Images/dall_girl.png" className="decor-image13" style={{ top: '40%', left: '80%', width: '70px', }} alt="doll" />
+
                 </div>
 
                 <div className="legacy-right">
@@ -149,7 +157,7 @@ function About() {
 
 
 
-            
+
 
             <section id="kidzee-advantage" className="section-content kidzee-advantage-section">
                 <div className="kidzee-advantage-left">
@@ -176,8 +184,7 @@ function About() {
                             <li>An innovative pedagogy aligned to NEP 2020 designed to help nurture collaborative team players and breakthrough leaders.</li>
                         </ul>
                     </div>
-                     <img src="/Images/btrfly_img.png" className="decor-image14" style={{ bottom: '10%', right: '10%', width: '60px',  }} alt="butterfly" />
-                <img src="/Images/more_fish.png" className="decor-image15" style={{ top: '60%', left: '45%', width: '50px',  }} alt="fish" />
+
                 </div>
 
                 <div className="kidzee-advantage-right">
