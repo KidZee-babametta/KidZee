@@ -107,6 +107,7 @@ function HomePage() {
                     {/*<h1 className="homepage-title">BABAMETTA, Vizianagaram</h1> */}
                     <h2 className="homepage-subtitle">Backside of Devi Park, MIG-364, Babametta, Vizianagaram</h2>
                     <h2 className="homepage-subtitle">+91 95 123 123 37 / 38 / 39</h2>
+                    <h2 className="homepage-subtitle">kidzeebabametta@gmail.com</h2>
                     <div className="ganesh1-footer-social1">
                         <div className="ganesh1-social-icons1">
                             <a href="https://www.instagram.com/kidzee_babametta/" target="_blank" rel="noopener noreferrer">
