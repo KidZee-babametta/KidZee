@@ -100,10 +100,10 @@ function HomePage() {
             <section className="homepage-main-section">
                 <div className="homepage-heading-container">
                     <img
-                        src="/Images/logo9.png"
+                        src="/Images/one.jpg"
                         alt="Kidzee Logo"
                         className="homepage-logo"
-                    />
+                    /><br />
                     {/*<h1 className="homepage-title">BABAMETTA, Vizianagaram</h1> */}
                     <h2 className="homepage-subtitle">Backside of Devi Park, MIG-364, Babametta, Vizianagaram</h2>
                     <h2 className="homepage-subtitle">+91 95 123 123 37 / 38 / 39</h2>
