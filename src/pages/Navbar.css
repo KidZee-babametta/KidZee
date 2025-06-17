@@ -34,9 +34,9 @@
 }
 
 .logo {
-  height: 110px;
-  width: 130px;
-  border-radius: 50%;
+  height: 80px;
+  width: auto;
+  border-radius: 12px;
 }
 
 .nav-button-section {
