@@ -101,7 +101,7 @@ function About() {
                             </p>
                         </div>
                         <div className="about-left-ganesh51">
-                            <img src="/Images/slide2.jpg" alt="Sindhuja" className="about-image-ganesh51" />
+                            <img src="/Images/slide4.jpg" alt="Sindhuja" className="about-image-ganesh51" />
                         </div>
                     </div>
 
