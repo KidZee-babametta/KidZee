@@ -612,33 +612,38 @@ function HomePage() {
 
                     <div className="about-card-ganesh51">
                         <div className="about-left-ganesh51">
-                            <p className="about-name-ganesh51">Mrs Tina Dembla</p>
-                            <p className="about-designation-ganesh51">Founder & Secretary<br />Kidzee Babametta</p>
+                            <p className="about-name-ganesh51">Mrs Sindhuja</p>
+                            <p className="about-designation-ganesh51">Founder & Correspondent KidZee<br />Kidzee Babametta<br />MSc Biotechnology</p>
                             <p className="about-description-ganesh51">
-                                At Kidzee, we believe that every child is born with infinite potential. Our mission is to nurture young minds with love, creativity, and the right learning environment, ensuring they take their first steps toward a bright future with confidence and joy. Welcome to a world where learning meets fun!
+
+                                As an educator and a parent, I understand how crucial the early years are in shaping a child’s future. At Kidzee, we don’t just teach—we inspire, engage, and empower. Our team is dedicated to creating an environment where children feel loved, valued, and excited to learn every day. Join us in this beautiful journey of growth and discovery!
+                               
                             </p>
                         </div>
                         <div className="about-right-ganesh51">
-                            <img src="/Images/slide2.jpg" alt="Tina" className="about-image-ganesh51" />
+                            <img src="/Images/slide3.jpg" alt="Tina" className="about-image-ganesh51" />
                         </div>
                     </div>
 
                     <div className="about-card-ganesh51 reverse-ganesh51">
-                        <div className="about-left-ganesh51">
-                            <img src="/Images/slide3.jpg" alt="Sindhuja" className="about-image-ganesh51" />
-                        </div>
+                        
                         <div className="about-right-ganesh51">
-                            <p className="about-name-ganesh51">Mrs Sindhuja</p>
-                            <p className="about-designation-ganesh51">Founder & Correspondent<br />Kidzee Babametta<br />MSc Biotechnology</p>
+                            <p className="about-name-ganesh51">Tina Dembla</p>
+                            <p className="about-designation-ganesh51">Founder & Secretary<br />KidZee Babametta</p>
                             <p className="about-description-ganesh51">
-                                As an educator and a parent, I understand how crucial the early years are in shaping a child’s future. At Kidzee, we don’t just teach—we inspire, engage, and empower. Our team is dedicated to creating an environment where children feel loved, valued, and excited to learn every day. Join us in this beautiful journey of growth and discovery!
+                                
+                                 At Kidzee, we believe that every child is born with infinite potential. Our mission is to nurture young minds with love, creativity, and the right learning environment, ensuring they take their first steps toward a bright future with confidence and joy. Welcome to a world where learning meets fun!
                             </p>
+                        </div>
+                        <div className="about-left-ganesh51">
+                            <img src="/Images/slide2.jpg" alt="Sindhuja" className="about-image-ganesh51" />
                         </div>
                     </div>
 
                     <img src="/Images/fruit_img.png" className="decor-image-ganesh51" style={{ top: '10%', left: '5%', width: '60px' }} alt="fruit" />
                 </div>
             </section>
+
 
 
 
