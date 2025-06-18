@@ -37,6 +37,7 @@
   height: 80px;
   width: auto;
   border-radius: 12px;
+  border-color: none;
 }
 
 .nav-button-section {
