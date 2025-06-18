@@ -637,7 +637,7 @@ function HomePage() {
                             </p>
                         </div>
                         <div className="about-left-ganesh51">
-                            <img src="/Images/slide4.jpg" alt="Sindhuja" className="about-image-ganesh51" />
+                            <img src="/Images/slide5.jpg" alt="Sindhuja" className="about-image-ganesh51" />
                         </div>
                     </div>
 
