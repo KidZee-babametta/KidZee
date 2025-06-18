@@ -100,7 +100,7 @@ function HomePage() {
             <section className="homepage-main-section">
                 <div className="homepage-heading-container">
                     <img
-                        src="/Images/logo24.png"
+                        src="/Images/logo26.png"
                         alt="Kidzee Logo"
                         className="homepage-logo"
                     /><br />

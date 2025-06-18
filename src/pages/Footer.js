@@ -35,7 +35,7 @@ const handleLinkClick = (path, scrollToId = null) => {
         <div className="ganesh1-footer-left ganesh1-footer-left-final">
           <div className="ganesh1-footer-left-top-final">
             <img
-              src="/Images/logo11.jpg"
+              src="/Images/logo26.png"
               alt="Footer Image"
               className="ganesh1-footer-image-final"
             />
