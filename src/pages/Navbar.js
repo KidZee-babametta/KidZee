@@ -64,7 +64,7 @@ function Navbar() {
       {loading && <PencilLoader />}
       <nav className={`navbar ${showNavbar ? 'visible' : 'hidden'}`} ref={navRef}>
         <div className="navbar-container">
-          <img src="/Images/one.jpg" alt="Logo" className="logo" />
+          <img src="/Images/logo21.png" alt="Logo" className="logo" />
           <div className="nav-button-section">
             <div className="wavy-bg">
               <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
