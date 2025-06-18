@@ -126,7 +126,7 @@ const handleLinkClick = (path, scrollToId = null) => {
               <FaPhoneAlt /> +91 95123 12337 / 38 / 39
             </p>
             <p>
-              <FaEnvelope /> kidzeebabmetta@gmail.com
+              <FaEnvelope /> kidzeebabametta@gmail.com
             </p>
             <p>
               <FaClock /> Timings - 09:00 am. to 01:00 pm., Mon-Fri
