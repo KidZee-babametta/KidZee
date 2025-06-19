@@ -72,7 +72,7 @@ const handleLinkClick = (path, scrollToId = null) => {
             <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'kinder-garden'); }}>Kindergarten</li>
             <li onClick={(e) => { e.preventDefault(); handleLinkClick('/programmes', 'teacher-training'); }}>Teacher Training Programme</li>
             <li onClick={() => handleLinkClick('/contact')}>Privacy Policy</li>
-            <li onClick={() => handleLinkClick('/programmes')}>Elementary School</li>
+            
           </ul>
         </div>
 

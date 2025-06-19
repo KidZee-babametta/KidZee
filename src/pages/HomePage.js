@@ -614,7 +614,7 @@ function HomePage() {
                     <div className="about-card-ganesh51">
                         <div className="about-left-ganesh51">
                             <p className="about-name-ganesh51">Mrs Sindhuja</p>
-                            <p className="about-designation-ganesh51">Founder & Correspondent KidZee<br />Kidzee Babametta<br />MSc Biotechnology</p>
+                            <p className="about-designation-ganesh51">Founder & Correspondent<br />Kidzee Babametta<br />MSc Biotechnology</p>
                             <p className="about-description-ganesh51">
 
                                 As an educator and a parent, I understand how crucial the early years are in shaping a child’s future. At Kidzee, we don’t just teach—we inspire, engage, and empower. Our team is dedicated to creating an environment where children feel loved, valued, and excited to learn every day. Join us in this beautiful journey of growth and discovery!
